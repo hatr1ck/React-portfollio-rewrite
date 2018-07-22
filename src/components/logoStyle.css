@@ -1,0 +1,7 @@
+.rabbitHead{
+    animation: spin 3s  5s   ;
+}
+@keyframes spin {
+    from { transform: translateY(100px); }
+    to { transform: translateY(20px); }
+  }

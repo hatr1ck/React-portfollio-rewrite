@@ -1,0 +1,28 @@
+.Ap{
+    width: 100px;
+    height: 600px;
+    margin: 0 auto;
+    border: 2px solid black;
+
+}
+.li{
+    text-decoration: none;
+    background-color: bisque;
+    animation: frames 1s   forwards ease-in-out;
+}
+@keyframes frames {
+    0%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+  
+  @media screen and (min-width: 400px){
+    .Ap{
+        width: 500px;
+        height: 600px;
+    }
+  }

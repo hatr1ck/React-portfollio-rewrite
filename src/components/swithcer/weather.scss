@@ -1,0 +1,600 @@
+
+
+.sun {
+  width:70px;
+  height:70px;
+  border-radius: 50%;
+  background-color: #ffa;
+  position: absolute;
+  top: -35px;
+  left: -35px;
+}
+.sun.a {
+  bottom: -35px;
+  right: -35px;
+  left: auto;
+  top:auto;
+}
+.moon {
+  position: absolute;
+  top: -35px;
+  right: -35px;
+  width:70px;
+  height:70px;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 0 white;
+}
+.moon.a {
+  bottom: -35px;
+  left: -35px;
+  top:auto;
+  right: auto;
+}
+
+
+.cloud::before {
+  content:'';
+  width: 35px;
+  height: 30px;
+  background-color: #fff;
+  margin-left: -20px;
+  margin-top: 10px;
+  display: block;
+  border-radius: 50%;
+}
+.cloud::after {
+  content:'';
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  right: -10px;
+  top: 17px;
+  border-radius: 50%;
+}
+.cloud {
+  width: 50px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top:20px;
+  left: -20%;
+  border: 0.3px solid black;
+  animation-name: cloud;
+  animation-duration: 70s;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+.cloud.a {
+  top:150px;
+  animation-duration: 55s;
+}
+.cloud.b {
+  top:100px;
+  left:-15%;
+  animation-duration: 38s;
+}
+.cloud.c {
+  top:250px;
+  left:-10%;
+  animation-duration: 25s;
+}
+
+.tree {
+  width:10px;
+  height:40px;
+  background-color: #766257;
+  left: 200px;
+  position: absolute; 
+}
+.tree::before {
+  content: '';
+    position: absolute;
+    bottom: 125%;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 43px 20px;
+    border-color: transparent transparent #bfde3b transparent;
+    z-index: 1;
+
+  animation-name: windy;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+.tree::after {
+  content: '';
+  position: absolute;
+  bottom:100%;
+  left:-25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 30px 60px 30px;
+  border-color: transparent transparent #93ae29 transparent;  
+}
+.tree.a {
+  transform: scale(0.5);
+  left: 250px;
+}
+.tree.b {
+  transform: scale(0.75);
+  left: 280px;
+}
+.tree.c {
+  transform: scale(1.5);
+  left:450px;
+  top: 100px;
+}
+.tree.d {
+  transform: scale(1.25);
+  left: 530px;
+  top: 80px;
+  z-index: 0;
+}
+
+.star::before {
+  content: '';
+  width:3px;
+  height:3px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left:20px;
+  top:20px;
+  animation-name: blinker;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+.star::after {
+  content: '';
+  width:2px;
+  height:2px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left:-200px;
+  top:50px;
+  animation-name: blinker;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;  
+}
+.star.a {
+  top:30px;
+  left:90%;
+}
+.star.b {
+  top:120px;
+  left:70%;
+}
+.star.c {
+  top:140px;
+  left:25%;
+}
+.star.e {
+  top:100px;
+  left:77%;
+}
+.star.f {
+  top:80px;
+  left:42%;
+}
+.star.g {
+  top:100px;
+  left:65%;
+}
+.star.d {
+  top:130px;
+  left:15%;
+}
+.star.h {
+  top:460px;
+  left:40%;
+}
+.star.k {
+  top:240px;
+  left:60%;
+}
+.star.j {
+  top:270px;
+  left:70%;
+}
+.star.p {
+  top:350px;
+  left:30%;
+}
+.star.m {
+  top:340px;
+  left:40%;
+}
+.star.z {
+  top:290px;
+  left:10%;
+}
+.star.x {
+  top:150px;
+  left:90%;
+}
+.star.s {
+  top:330px;
+  left:70%;
+}
+.eclipse {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left:60%;
+  top:20%;
+  animation-name: time;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  z-index: 0;
+  animation-timing-function: linear;
+}
+.eclipse2 {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left:60%;
+  top:20%;
+  animation-name: time2;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  z-index: 0;
+  animation-timing-function: linear;
+}
+
+@keyframes time {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(90deg); }
+}
+@keyframes time2 {
+  0% { transform: rotate(90deg); }
+  100% { transform: rotate(180deg); }
+}
+.canvas {
+  width: 600px;
+  height: 600px;
+  border: 1px solid #000;
+  margin: 0 auto;
+  position: relative;
+  background: #70c4c6;
+  animation-name: daylight;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  animation-timing-function: linear;
+}
+.canvas2 {
+  width: 600px;
+  height: 600px;
+  border: 1px solid #000;
+  margin: 0 auto;
+  position: relative;
+  background: #70c4c6;
+  animation-name: daylight2;
+  animation-duration: 2.5s;
+  overflow: hidden;
+  animation-timing-function: linear;
+}
+@keyframes daylight {
+  0% {  background-color: #70c4c6; }
+  80% {  background-color: #524b64; }
+  100% { background-color: #354a4a; }
+
+}
+@keyframes daylight2 {
+  0% { background-color: #354a4a; }
+  80% {  background-color: #e2b553; }
+  100% {  background-color: #70c4c6;}
+}
+
+.land::before {
+  width: 100%;
+  height: 200px;
+  content: '';
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  border-radius: 50%;
+  background-color: #96be29;
+  border: 1px solid black;
+  transform: rotate(-15deg);
+  animation-name: land;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+.land2::before {
+  width: 100%;
+  height: 200px;
+  content: '';
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  border-radius: 50%;
+  background-color: #96be29;
+  border: 1px solid black;
+  transform: rotate(-15deg);
+  animation-name: land1;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+.land {
+  width: 100%;
+  height: 320px;
+  position: absolute;
+  left:-50px;
+  bottom: -120px;
+  background-color: #83a81c;
+  border-radius: 50%;
+  z-index: 1;
+  border: 1px solid black;
+  animation-name: land;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+.land2 {
+  width: 100%;
+  height: 320px;
+  position: absolute;
+  left:-50px;
+  bottom: -120px;
+  background-color: #83a81c;
+  border-radius: 50%;
+  z-index: 1;
+  border: 1px solid black;
+  animation-name: land1;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+@keyframes land {
+  0% { background-color: #A3E263; }
+  100% { background-color: #354723;}
+}
+@keyframes land1 {
+  0% { background-color: #354723; }
+  100% { background-color: #A3E263;}
+}
+@keyframes cloud {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(850px); }
+}
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+.star {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  animation-name: fader;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+.star2 {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  animation-name: fader2;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes fader {
+  0% { opacity: 0; }
+  40% { opacity: 0; }
+  100% { opacity: 1; }
+
+}
+@keyframes fader2 {
+
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes blinker {
+  0% { opacity: 0; }
+  18% { opacity: 0; }
+  25% { opacity: 1; }
+  40% { opacity: 0; }
+  60% { opacity: 1; }
+  70% {  opacity: 0; }
+  100% { opacity: 0; }  
+}
+@keyframes blinker-1 {
+  0% { opacity: 0; }
+  30% { opacity: 0; }
+  40% { opacity: 1; }
+  60% { opacity: 1; }
+  80% {  opacity: 0; }
+  100% { opacity: 0; }  
+}
+@keyframes windy {
+  15% {  transform: translateX(5px); transform: rotate(5deg); }
+  80% {  transform: translateX(7px); transform: rotate(7deg);}
+  80% {  transform: translateX(5px); transform: rotate(5deg);}
+}
+@keyframes wind {
+  0% {  left: -800px; opacity: 0 }
+  15% { opacity: 1; }
+  70% { left: 800px; opacity: 1;}
+  80% {  left: 800px; opacity: 0;}
+  100% {  left: -1000px; opacity: 0;}
+}
+
+
+@keyframes snowday {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+.snow {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+}
+.snow.fall {
+  animation-name: snowday ;
+  animation-duration: 5s;
+}
+
+@mixin crater($top, $left, $size) {
+  content: '';
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $size;
+  height: $size;
+  background-color: #EFEEDA;
+  border-radius: 100%;
+  border: 4px solid #DEE1C5;
+}
+
+@mixin cloudBubble($top, $right, $width, $height, $deg) {
+  content: '';
+  display: block;
+  position: relative;
+  top: $top;
+  right: $right;
+  width: $width;
+  height: $height;
+  border: 8px solid #D4D4D2;
+  border-radius: 100%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotateZ($deg);
+  background-color: #fff;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  margin-left: 100px;
+  padding: 4px;  
+  border-radius: 40px;
+}
+
+.toggle:before,
+.toggle:after {
+  content: '';
+  display: table;
+}
+
+.toggle:after {
+  clear: both;
+}
+
+.toggle-bg {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 100%;  
+  height: 100%;
+  background-color: #C0E6F6;
+  border-radius: 40px;
+  border: 4px solid #81C0D5;
+  transition: all 5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.toggle-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  height: 100%;
+  border: 1px solid red;
+  border-radius: 40px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+  background-color: #F5EB42;
+  border: 4px solid #E4C74D;
+  border-radius: 50%;
+  transition: all 4.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.toggle-switch-figure {  
+  position: absolute;
+  bottom: -14px;
+  left: -50px;
+  display: block;
+  width: 80px;
+  height: 30px;
+  border: 8px solid #D4D4D2;
+  border-radius: 20px;  
+  background-color: #fff;
+  transform: scale(0.4);
+  transition: all .12s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  &:after {
+    @include cloudBubble(-65px, -42px, 15px, 15px, 70deg);
+  }
+  &:before {
+    @include cloudBubble(-25px, -10px, 30px, 30px, 30deg);
+  }
+}
+
+.toggle-switch-figureAlt {
+  @include crater(5px, 2px, 2px);
+  
+  box-shadow: 
+    42px -7px 0 -3px #FCFCFC,
+    75px -10px 0 -3px #FCFCFC,
+    54px 4px 0 -4px #FCFCFC,
+    83px 7px 0 -2px #FCFCFC,
+    63px 18px 0 -4px #FCFCFC,
+    44px 28px 0 -2px #FCFCFC,
+    78px 23px 0 -3px #FCFCFC;
+  
+  transition: all .12s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  transform: scale(0);
+}
+
+.toggle-switch-figureAlt:before {
+  @include crater(-6px, 18px, 7px);
+}
+
+.toggle-switch-figureAlt:after {
+  @include crater(19px, 15px, 2px);
+}
+
+.toggle-input:checked ~ .toggle-switch {
+  margin-left: 0;
+  border-color: #DEE1C5;
+  background-color: #FFFDF2;
+}
+
+.toggle-input:checked ~ .toggle-bg {
+  background-color: #484848;
+  border-color: #202020;
+}
+
+.toggle-input:checked ~ .toggle-switch .toggle-switch-figure {
+  margin-left: 40px;
+  opacity: 0;
+  transform: scale(0.1);
+}
+
+.toggle-input:checked ~ .toggle-switch .toggle-switch-figureAlt {
+  transform: scale(1);
+}

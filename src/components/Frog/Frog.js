@@ -12,12 +12,11 @@ class Frog extends Component {
             xParam: e.clientX,
             yParam: e.clientY
         });
-        console.log(this.state.yParam);
     }
 
     render(){
         return(
-            <div className="froge" onClick={this.clicked.bind(this)}><h1 style={{
+            <div className="froge" onPointerMove={this.clicked.bind(this)}><h1 style={{
                 color:'red',
                 position:'absolute',
         left:this.state.xParam,

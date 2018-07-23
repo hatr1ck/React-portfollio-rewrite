@@ -8,6 +8,7 @@ import Weather from './components/weather API/weather';
 import Todo from './components/shoping/todo';
 import Goodreads from './components/sites/goodreads/goodreads';
 import Frog from './components/Frog/Frog';
+import Spinners from './components/spinners/spinners';
 
 class App extends Component {
 
@@ -24,6 +25,7 @@ class App extends Component {
           <Route path="/todo" exact component={Todo}/>
           <Route path="/goodreads" exact component={Goodreads}/>
           <Route path="/frog" exact component={Frog}/>
+          <Route path="/spinners" exact component={Spinners}/>
           </div>
         </div>
       </BrowserRouter>

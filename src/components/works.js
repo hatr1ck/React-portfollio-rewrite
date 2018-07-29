@@ -7,7 +7,7 @@ class Works extends Component {
       projects: [
                 {title:"Weather API", link:"/weather", description:"1", pic:""},
                 {title:"Weather API",  link:"/todo", description:"2", pic:""},
-                {title:"Weather API", link:"/goodreads", description:"3", pic:""},
+                {title:"Login", link:"/login", description:"3", pic:""},
                 {title:"Loading simulator", link:"/spinners", description:"4", pic:"https://cdn3.volusion.com/ztghq.pevcc/v/vspfiles/photos/_SSPIN2(Rainbow-Zebra)-2.jpg?1517922868"},
                 {title:"Frog.io", link:"/frog", description:"5", pic:"http://images.clipartpanda.com/frog-clip-art-bug-eyed-frog.svg"}
           ]}

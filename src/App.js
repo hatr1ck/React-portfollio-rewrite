@@ -6,7 +6,7 @@ import Works from './components/works';
 import {connect} from 'react-redux';
 import Weather from './components/weather API/weather';
 import Todo from './components/shoping/todo';
-import Goodreads from './components/sites/goodreads/goodreads';
+import Login from './components/login/login';
 import Frog from './components/Frog/Frog';
 import Spinners from './components/spinners/spinners';
 
@@ -23,7 +23,7 @@ class App extends Component {
           <Route path="/" exact component={Works} />
           <Route path="/weather" exact component={Weather} />
           <Route path="/todo" exact component={Todo}/>
-          <Route path="/goodreads" exact component={Goodreads}/>
+          <Route path="/login" exact component={Login}/>
           <Route path="/frog" exact component={Frog}/>
           <Route path="/spinners" exact component={Spinners}/>
           </div>

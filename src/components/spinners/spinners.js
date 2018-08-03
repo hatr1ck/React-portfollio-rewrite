@@ -31,13 +31,12 @@ send=()=>{
       		<div className="spinner spinner-1" onClick={this.clicked}></div>
       		<div className="spinner spinner-2" onClick={this.clicked}></div>
       		<div className="spinner spinner-3" onClick={this.clicked}></div>
-      		<div className="spinner spinner-4" onClick={this.clicked}></div><br />
+      		<div className="spinner spinner-4" onClick={this.clicked}></div>
+      		<div className="spinner spinner-5" onClick={this.clicked}></div>
+      		<div className="spinner-6" onClick={this.clicked}></div>
+      		<div className="spinner spinner-7" onClick={this.clicked}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 
-
-
-
-			
-			<div className={this.state.shoosenOne}></div>
+			<div className={this.state.shoosenOne}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 			<button onClick={this.send}> LOAD SOMETHING </button>
       	</div>
       );

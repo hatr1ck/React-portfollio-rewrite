@@ -3,95 +3,12 @@ import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./login.scss";
 import axios from 'axios';
 
-// export default class Login extends Component {
-//   constructor(props) {
-//     super(props);
-
-//     this.state = {
-//       email: "",
-//       password: "",
-//       login:{
-//       	nick: "",
-//       	email:"",
-//       	password: ""
-//       }
-//     };
-//   }
-//   post=()=>{
-//   	console.log("WHAT");
-//   	axios.post('http://localhost:3001/adduser', this.state.nick);
-//   }
-
-//   validateForm() {
-//     return this.state.email.length > 0 && this.state.password.length > 0;
-//   }
-
-//   handleChange = event => {
-//     this.setState({
-//        login:{[event.target.id]: event.target.value}
-//     });
-//   }
-
-//   handleSubmit = event => {
-//     event.preventDefault();
-//   }
-
-//   render() {
-//     return (
-//       <div className="Login">
-//         <form onSubmit={this.handleSubmit}>
-// {        <FormGroup controlId="nick" bsSize="large">
-//             <ControlLabel>Nickname</ControlLabel>
-//             <FormControl
-//               autoFocus
-//               type="nick"
-//               value={this.state.login.nick}
-//               onChange={this.handleChange}
-//             />
-//           </FormGroup>}
-//           <FormGroup controlId="email" bsSize="large">
-//             <ControlLabel>Email</ControlLabel>
-//             <FormControl
-//               autoFocus
-//               type="email"
-//               value={this.state.login.email}
-//               onChange={this.handleChange}
-//             />
-//           </FormGroup>
-//           <FormGroup controlId="password" bsSize="large">
-//             <ControlLabel>Password</ControlLabel>
-//             <FormControl
-//               value={this.state.login.password}
-//               onChange={this.handleChange}
-//               type="password"
-//             />
-//           </FormGroup>
-//           <Button
-//             block
-//             bsSize="large"
-//             disabled={!this.validateForm()}
-//             type="submit"
-//             onClick={this.post}
-//           >
-//             Login
-//           </Button>
-//         </form>
-//       </div>
-//     );
-//   }
-
-// }
-// import React, { Component } from "react";
-// import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-// import "./login.scss";
-// import axios from 'axios';
-
 export default class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      login:"",
+      username:"",
       email: "",
       password: ""
     };
@@ -112,24 +29,31 @@ export default class Login extends Component {
   }
   post=()=>{
   	console.log("WHAT");
-  	axios.post('http://localhost:3001/adduser', this.state);
-  	this.setState({      
-  	   login:"",
+  	axios.post('http://localhost:3100/auth/addnew', this.state).then(
+  	this.setState({
+  	   username:"",
       email: "",
       password: ""
-    });
+    }));
   }
-
+google=()=>{
+	axios.get('http://localhost:3100/auth/google');
+}
+google1=()=>{
+	console.log(this.data);
+	console.log(this);
+	//axios.get('http://localhost:3100/auth/google');
+}
   render() {
     return (
       <div className="Login">
         <form onSubmit={this.handleSubmit}>
-        <FormGroup controlId="login" bsSize="large">
+        <FormGroup controlId="username" bsSize="large">
             <ControlLabel>Login</ControlLabel>
             <FormControl
               autoFocus
-              type="login"
-              value={this.state.login}
+              type="username"
+              value={this.state.username}
               onChange={this.handleChange}
             />
           </FormGroup>
@@ -160,6 +84,9 @@ export default class Login extends Component {
             Login
           </Button>
         </form>
+        <a href='http://localhost:3100/auth/google'>meee</a>
+        <button onClick={this.google}>Google+</button>
+        <button onClick={this.google1}>get data</button>
       </div>
     );
   }

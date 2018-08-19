@@ -9,6 +9,7 @@ import Todo from './components/shoping/todo';
 import Login from './components/login/login';
 import Frog from './components/Frog/Frog';
 import Spinners from './components/spinners/spinners';
+import Magickball from './components/8ball/8ball';
 
 class App extends Component {
 
@@ -23,8 +24,9 @@ class App extends Component {
           <Route path="/" exact component={Works} />
           <Route path="/weather" exact component={Weather} />
           <Route path="/todo" exact component={Todo}/>
-          <Route path="/login" exact component={Login}/>
+          <Route path="/login1" exact component={Login}/>
           <Route path="/frog" exact component={Frog}/>
+          <Route path="/8ball" exact component={Magickball}/>
           <Route path="/spinners" exact component={Spinners}/>
           </div>
         </div>

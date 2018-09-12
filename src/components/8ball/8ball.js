@@ -30,7 +30,6 @@ export default class Magickball extends Component {
       ball: 'eball'
     }
     clicked = (e)=>{
-      console.log(Math.floor(Math.random() * 21));
       if(this.state.somestyle === 'up'){
         this.setState({
         answer: this.state.answers[Math.floor(Math.random() * 21)],

@@ -18,13 +18,14 @@ class Works extends Component {
         <ul>
           {this.state.projects.map((elem)=>{
             return (<li className="card" key={elem.description}>
+              <Link to={elem.link}>
                       <div className="card-body">
                       
                         <img src={elem.pic} alt="nathin hiar" height="100%" width="100%" />
                         <h4 className="card-title">{elem.title}</h4>
-                        <Link to={elem.link}>LINK</Link>
+                       
                       </div>
-
+              </Link>
                   </li>)
           })}
           </ul>

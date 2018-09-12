@@ -9,8 +9,8 @@ class Frog extends Component {
     }
     clicked=(e)=>{
         this.setState({
-            xParam: e.clientX,
-            yParam: e.clientY
+            xParam: e.pageX,
+            yParam: e.pageY
         });
     }
 

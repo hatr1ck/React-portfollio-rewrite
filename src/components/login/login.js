@@ -40,8 +40,7 @@ google=()=>{
 	axios.get('http://localhost:3100/auth/google');
 }
 google1=()=>{
-	console.log(this.data);
-	console.log(this);
+
 	//axios.get('http://localhost:3100/auth/google');
 }
   render() {

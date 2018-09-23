@@ -11,7 +11,6 @@ import Frog from './components/Frog/Frog';
 import Spinners from './components/spinners/spinners';
 import Magickball from './components/8ball/8ball';
 import Icons from './icons/icon';
-import Zb from './icons/zb.svg';
 
 class App extends Component {
 
@@ -19,52 +18,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <div >
-        <img src={Zb} height='100%' width='100%' className='pic' alt='error' />
+           <Link to="/">HOMA</Link><br />
           <div className="head">
-          
-          <Link to="/">HOMA</Link><br />
             <Icons />
-            <div className="sun">
-    <div className="ray_box">
-        <div className="ray ray1"></div>
-        <div className="ray ray2"></div>
-        <div className="ray ray3"></div>
-        <div className="ray ray4"></div>
-        <div className="ray ray5"></div>
-        <div className="ray ray6"></div>
-        <div className="ray ray7"></div>
-        <div className="ray ray8"></div>
-        <div className="ray ray9"></div>
-        <div className="ray ray10"></div>
-    </div>
-</div>
-          <ul className="boat">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-          <div id="waveCont">
-  <div id="wave1"></div>
-  <div id="wave2"></div>
-</div>
           </div>
-
           <div className="content">
-
-
           <Route path="/" exact component={Works} />
           <Route path="/weather" exact component={Weather} />
           <Route path="/todo" exact component={Todo}/>
@@ -72,11 +30,6 @@ class App extends Component {
           <Route path="/frog" exact component={Frog}/>
           <Route path="/8ball" exact component={Magickball}/>
           <Route path="/spinners" exact component={Spinners}/>
-
-          </div>
-          <div className='contacts'>
-            <h1>Contacts:</h1>
-          </div>
           </div>
         </div>
       </BrowserRouter>

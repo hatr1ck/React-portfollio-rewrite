@@ -17,16 +17,16 @@ class Works extends Component {
       return (
         <ul>
           {this.state.projects.map((elem)=>{
-            return (<li className="card" key={elem.description}>
-              <Link to={elem.link}>
-                      <div className="card-body">
-                      
-                        <img src={elem.pic} alt="nathin hiar" height="100%" width="100%" />
-                        <h4 className="card-title">{elem.title}</h4>
-                       
-                      </div>
-              </Link>
-                  </li>)
+            return (<a href={elem.link} className="card">
+  <div className="blur"></div>
+  <img src={elem.pic} className="avatar"></img>
+    <div className="name">
+      {elem.title}
+  </div>
+  <div className="info">
+  {elem.text}
+  </div>
+</a>)
           })}
           </ul>
       );

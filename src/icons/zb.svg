@@ -18,7 +18,7 @@
 <g>
 	<g>
 		
-			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="954.022" y1="-1176.2484" x2="966.1301" y2="787.062" gradientTransform="matrix(1 0 0 1 0 2288)">
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="954.022" y1="4256.2485" x2="966.1301" y2="2292.938" gradientTransform="matrix(1 0 0 -1 0 5368)">
 			<stop  offset="0" style="stop-color:#146164"/>
 			<stop  offset="1" style="stop-color:#1C26ED"/>
 		</linearGradient>
@@ -68,7 +68,7 @@
 	c68.8-0.6,102.5-118.9,152-108c40.4,8.9,28.6,90.2,75,110c66.3,28.4,136.7-117.7,246-108c87.3,7.8,108.2,106.8,189,109
 	c75.8,2.1,90.8-116.3,163-124c39.6-4.2,91.3,22.7,158,124"/>
 <path class="st6" d="M1910.5,1178.5"/>
-<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="248.5" y1="-1217.5" x2="248.5" y2="-1217.5" gradientTransform="matrix(1 0 0 1 0 2288)">
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="248.5" y1="4297.5" x2="248.5" y2="4297.5" gradientTransform="matrix(1 0 0 -1 0 5368)">
 	<stop  offset="0" style="stop-color:#146164"/>
 	<stop  offset="1" style="stop-color:#1C26ED"/>
 </linearGradient>
@@ -77,10 +77,5 @@
 	c74.1-6.4,76.2-82.6,151.9-94.5c99.2-15.4,144.3,105.8,240.7,89.4c78.4-13.4,128.3-32.6,200.5-39.6c100-9.7,246.5-22,290.3-34.5
 	c56.3-16.1,248.3,49.8,325.4,44.7c82.6-5.4,301.3-73.2,338.8-62.6c22,6.3-1.4,71,1,135.3"/>
 <path class="st9" d="M1919,1272"/>
-<rect y="763.7" class="st10" width="1919" height="150.3"/>
-<style>
-	.st10{
-	opacity:1;
-	}
-	</style>
+<rect x="2.5" y="762.4" class="st10" width="1919" height="151.6"/>
 </svg>

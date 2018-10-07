@@ -1,76 +1,53 @@
-
-.card{
-			width: 300px;
-			height: 450px;
-			border-radius: 15px;
-			box-shadow: 0 0 7px 1px rgba(255,255,255,.4);
-			overflow: hidden;
-			cursor: pointer;
-			transition: all .1s ease-out;
-			opacity: .94;
-			margin: 1%;
+.ele{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  font-family: "open sans";
 }
-.blur{
-    width: 150%;
-    height: 150%;
-    top: -10%;
-    left: -10%;
-    position: absolute;
-    background-size:cover;
-    filter: blur(10px) brightness(.7);
-    z-index: -1;
+.goWhite{
+  color: white;
 }
-
-.avatar{
-				box-shadow: 0 0 7px 3px rgba(255,255,255,.4);
-				border-radius: 50%;
-				position: absolute;
-				top: 20%;
-				left: 50%;
-				transform: translate(-50%,-20%);
-				width: 150px;
-				height: 150px;
-	background-size: cover;
-	background-position: center;
-				transition: all .1s ease-out;
-
+.carde {
+  margin: 1%;
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  text-align: center;
+  display: inline-block;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+.carde:hover {
+  box-shadow: 0 20px 30px rgba(0,0,0,.3);
+}
+.card-banner {
+  background: url('https://i.ytimg.com/vi/Lk5PU95Hb6s/maxresdefault.jpg');
+  width: inherit;
+  height: 100px;
+  padding-top: 35px;
+  background-position: top;
+  background-size: cover;
 }
 
-.name{
-				position: absolute;
-				top: 45%;
-				left: 50%;
-				transform: translate(-50%,-45%);
-				padding: 5px;
-				text-align: center;
-				color: black;
-				font-size: 1.8em;
-				font-weight: bold;
-				font-family: 'Raleway', sans-serif;
-				opacity: 0;
-				transition: all .1s ease-in;
+.card-profile {
+  background: url('https://i.ytimg.com/vi/Lk5PU95Hb6s/maxresdefault.jpg');
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto auto;
+  background-size: cover;
+  background-color: #f1f1f1;
+  border: 3px solid #fff;
+  margin-top: 30px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.5);
 }
-
-.card:hover .avatar{
-					box-shadow: 0 0 15px 7px rgba(255,255,255,.7);
-				transform:  translate(-50%,-45%);
-				transform-origin: top;
+h3 {
+    margin-top: 25px;
+		margin-bottom: 5px;
+		font-size: 18px;
 }
-.card:hover .name{
-					opacity: 1;
-}
-
-.card:hover{
-									box-shadow: 0 0 15px 7px rgba(255,255,255,.7);
-}
-
-.info{
-				position: absolute;
-				bottom: 50px;
-				left: 0;
-				padding: 30px;
-				text-align: center;
-				color: black;
-				font-size: 1em;
-				font-family: 'Raleway', sans-serif;
+a{
+  text-decoration: none !important;
 }

@@ -26,22 +26,19 @@ export default class Magickball extends Component {
       'Very doubtful'
       ],
       somestyle:"up",
-      answer:"click me",
-      ball: 'eball'
+      answer:"click me"
     }
     clicked = (e)=>{
       if(this.state.somestyle === 'up'){
         this.setState({
         answer: this.state.answers[Math.floor(Math.random() * 21)],
-        somestyle:"up1",
-        ball: 'eball1'
+        somestyle:"up1"
       })
       }
         else{
           this.setState({
         answer: this.state.answers[Math.floor(Math.random() * 21)],
-        somestyle:"up",
-        ball: 'eball'
+        somestyle:"up"
         }
       )}
     }
@@ -50,7 +47,7 @@ export default class Magickball extends Component {
       return(
       <div className="ball">
       <div className="epos">
-      <div className={this.state.ball} onClick={this.clicked}>
+      <div className='ebal' onClick={this.clicked}>
         <div className="egrad"></div>
         <div className="ewin"> <div className={this.state.somestyle}>
   <p>{this.state.answer}</p>

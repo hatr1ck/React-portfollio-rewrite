@@ -6,7 +6,8 @@ import javascript from'./JavaScript.svg';
 import mongodb from'./mongodb.svg';
 import node from'./Node.svg';
 import css from'./Css.svg';
-import sss from'./zb.svg';
+import sss from'./redux.svg';
+import bootstrap from'./Boostrap.svg';
 //import 'item.css';
 
 class Icon extends React.Component {
@@ -16,9 +17,10 @@ class Icon extends React.Component {
       {name:'CSS3', comp: css},
       {name:'JavaScript', comp: javascript},
       {name:'React', comp: react}, 
+      {name:'Redux', comp:sss},
+      {name:'Bootstrap', comp:bootstrap},
       {name:'Illustrator', comp: illustrator},  
       {name:'NodeJS', comp: node}, 
-      {name:'ss', comp:sss},
       {name:'MongoDB', comp:mongodb}
     ]
   }
@@ -28,11 +30,11 @@ class Icon extends React.Component {
       <div>
       {this.state.techs.map((elem)=>{
       return (
-        <span style={{display: 'inline-block', fontSize:'18px', textAlign: 'center', margin:'20px'}} key={elem.comp}>
+        <div style={{display: 'inline-block', fontSize:'1rem', textAlign: 'center', margin:'1%'}} key={elem.comp}>
         
-        <img   src={elem.comp} height='100em' alt='error'/>
+        <img   src={elem.comp} height='60rem' alt='error'/>
         <div  className='item'>{elem.name}</div>
-        </span>)
+        </div>)
       })}
 
       </div>

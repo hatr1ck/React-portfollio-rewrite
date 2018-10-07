@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class Term extends Component {
     render(){
-        return(<div><svg width="256" height="512" xmlns="http://www.w3.org/2000/svg" svg="http://www.w3.org/2000/svg">
+        return(<div><svg width="90" height="512" xmlns="http://www.w3.org/2000/svg" svg="http://www.w3.org/2000/svg">
         <title>Blank fundraising thermometer</title>
         <metadata id="metadata7">image/svg+xmlThermometer2006-11-06Trent Buck &lt;twb@cyber.com.au&gt;</metadata>
         <g>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+//import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./login.scss";
 import axios from 'axios';
 
@@ -46,46 +46,7 @@ google1=()=>{
   render() {
     return (
       <div className="Login">
-        <form onSubmit={this.handleSubmit}>
-        <FormGroup controlId="username" bsSize="large">
-            <ControlLabel>Login</ControlLabel>
-            <FormControl
-              autoFocus
-              type="username"
-              value={this.state.username}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <FormGroup controlId="email" bsSize="large">
-            <ControlLabel>Email</ControlLabel>
-            <FormControl
-              autoFocus
-              type="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
-            <ControlLabel>Password</ControlLabel>
-            <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
-              type="password"
-            />
-          </FormGroup>
-          <Button
-            block
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-            onClick={this.post}
-          >
-            Login
-          </Button>
-        </form>
-        <a href='http://localhost:3100/auth/google'>meee</a>
-        <button onClick={this.google}>Google+</button>
-        <button onClick={this.google1}>get data</button>
+
       </div>
     );
   }

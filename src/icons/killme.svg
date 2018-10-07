@@ -1,6 +1,10 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   viewBox="0 0 1920 3080" style="enable-background:new 0 0 1920 3080;" xml:space="preserve">
+<svg preserveAspectRatio="xMinYMin slice" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="100px" y="0px"
+   viewBox="0 0 1920 3080" width='90rem' height='100%'>
 <style type="text/css">
+body{
+  background: #230B03;
+}
+  .st53{fill:#230B03;}
   .st0{fill:#7C4D25;}
   .st1{fill:url(#SVGID_1_);}
   .st2{fill:url(#SVGID_2_);stroke:#000000;stroke-miterlimit:10;}
@@ -54,7 +58,6 @@
   .st50{fill:#184929;stroke:#050505;stroke-miterlimit:10;}
   .st51{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
   .st52{fill:#FFFFFF;stroke:#FCFCFC;stroke-miterlimit:10;}
-  .st53{fill:#0C0A06;}
   .st54{fill:#EEA120;}
   .st55{fill:#5D312D;}
   .st56{fill:#DE3226;}
@@ -238,7 +241,7 @@
   }
     .cloud{
     animation: swms 60s infinite linear;
-    opacity: .9;
+    opacity: .8;
   }
     @keyframes swms{
     0%{
@@ -250,7 +253,7 @@
   }
       .cloud1{
     animation: swmss 50s infinite linear;
-    opacity: .9;
+    opacity: .8;
   }
     @keyframes swmss{
     0%{
@@ -262,7 +265,7 @@
   }
       .cloud2{
     animation: swms 80s infinite linear;
-    opacity: .9;
+    opacity: .8;
   }
     @keyframes swms{
     0%{
@@ -271,6 +274,24 @@
     100%{
       transform: translateX(100%);
     }
+  }
+  .svg{
+    position: relative;
+
+  }
+   #root{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+  *{
+    margin: 0;
+  }
+  .algae {
+    transform: translateY(5%);
+  }
+  .star {
+    transform: translateY(5%);
   }
 </style>
 <g id="change2">
@@ -283,7 +304,7 @@
       <stop  offset="0" style="stop-color:#000994"/>
       <stop  offset="1" style="stop-color:#1B003F"/>
     </linearGradient>
-    <rect y="907.6" class="st1" width="1924.1" height="2178.4"/>
+    <rect y="907.6" class="st1" width="1924.1" height="2178.4"/> <!-- bg -->
   </g>
 </g>
 <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="364" y1="-4191.0498" x2="1598.0121" y2="-4191.0498" gradientTransform="matrix(1 0 0 1 0 4576)">
@@ -337,7 +358,7 @@
 <path class="st8" d="M248.5,1070.5"/>
 <path class="st9" d="M1919,1272"/>
 <rect y="763.7" class="st10" width="1920" height="150.3"/>
-<g>
+<g class='star'>
   <g  class='bubble1'>
     <ellipse class="st11" cx="661" cy="2874.5" rx="9.3" ry="9"/>
     
@@ -409,7 +430,7 @@
       <ellipse transform="matrix(0.7287 -0.6848 0.6848 0.7287 -1582.8978 1697.3629)" class="st6" cx="1350.9" cy="2846.6" rx="1.2" ry="2.3"/>
   </g>
 </g>
-<g  class='gg'>
+<g  class='algae'>
   <path class="st12" d="M1587.6,2926.2c-15.8,12.1-125.6-173.3-107.5-201.2c3.5-5.5,11.2-3.8,16.5-2.5c66.5,16,102.9,158.6,93,199.8
     C1589.3,2923.7,1588.8,2925.3,1587.6,2926.2z"/>
   <path class="st12" d="M1546,2658.3c0.4,0.6,1.4,2.3,2.5,4.5c7,12.6,58.7,107.7,63.1,241.7c0.6,18.2-0.2,21.1-1.3,21.5
@@ -424,7 +445,7 @@
   <path class="st13" d="M1599.5,2940.8c14.3-4.3-3.7-230.6-18.5-230.7c-8.1-0.1-19.2,67.5-11.8,130.5
     C1574.9,2888.2,1592.2,2943,1599.5,2940.8z"/>
 </g>
-<g  class='gg'>
+<g  class='algae'>
   <path class="st12" d="M1794.1,2925.2c-20.1,3.2-73.1-227-45.4-243.7c5.4-3.3,12.8,2.3,17.8,6.2c63.2,49.5,54.5,201.6,30.9,235
     C1796.6,2923.7,1795.6,2925,1794.1,2925.2z"/>
   <path class="st12" d="M1787.8,2635.6c0.3,0.7,1.1,2.6,2.1,5.1c5.9,14.3,48.6,121.3,33.6,255.9c-2,18.3-3.4,21-4.6,21.2
@@ -1261,7 +1282,7 @@
   <ellipse class="st52" cx="254.9" cy="169" rx="51.4" ry="17.4"/>
   <ellipse class="st52" cx="146.6" cy="169" rx="35.4" ry="17"/>
 </g>
-<g class='gg'>
+<g class='algae'>
   <path class="st12" d="M875.9,2940.6c-15.8,12.1-125.6-173.3-107.5-201.2c3.5-5.5,11.2-3.8,16.5-2.5c66.5,16,102.9,158.6,93,199.8
     C877.6,2938,877.1,2939.6,875.9,2940.6z"/>
   <path class="st12" d="M834.2,2672.7c0.4,0.6,1.4,2.3,2.5,4.5c7,12.6,58.7,107.7,63.1,241.7c0.6,18.2-0.2,21.1-1.3,21.5
@@ -1275,7 +1296,7 @@
   <path class="st13" d="M887.8,2955.1c14.3-4.3-3.7-230.6-18.5-230.7c-8.1-0.1-19.2,67.5-11.8,130.5
     C863.1,2902.5,880.5,2957.3,887.8,2955.1z"/>
 </g>
-<g>
+<g  class='algae'>
   <path class="st12" d="M1071.3,2966.1c-20.1,3.2-73.1-227-45.4-243.7c5.4-3.3,12.8,2.3,17.8,6.2c63.2,49.5,54.5,201.6,30.9,235
     C1073.8,2964.6,1072.8,2965.8,1071.3,2966.1z"/>
   <path class="st12" d="M1065,2676.5c0.3,0.7,1.1,2.6,2.1,5.1c5.9,14.3,48.6,121.3,33.6,255.9c-2,18.3-3.4,21-4.6,21.2
@@ -1289,8 +1310,8 @@
   <path class="st13" d="M1111.2,2967.7c19-4.2-4.9-226.7-24.4-226.9c-10.7-0.1-25.4,66.4-15.6,128.3
     C1078.6,2916,1101.5,2969.8,1111.2,2967.7z"/>
 </g>
-<rect y="2895.6" class="st53" width="1921.5" height="190.4"/>
-<g id="g5"  class='gg'>
+<!-- <rect y="2895.6" class="st53" width="1921.5" height="190.4"/> --> <!-- dno -->
+<g id="g5"  class='house'>
   <g id="XMLID_8_">
     <g id="g8">
       <path id="path10" class="st54" d="M1874.3,718.2c-3.3-0.1-6.6-0.5-9.9-1.3c-4.1-1-8.3-2.4-12.4-4.2h10.1c3.9,1.8,8,3.6,12.2,5.2
@@ -1550,7 +1571,7 @@
     c0.2,0.6,0.8,0.9,1.5,0.9h10.7l-18.2,18c-0.5,0.5-0.6,1.4-0.4,2s0.8,1.3,1.5,1.3h73.8c0.6,0,1.2-0.7,1.5-1.3
     C1700.9,864.2,1700.8,863.2,1700.3,862.8z"/>
 </g>
-<g>
+<g  class='star'>
   <path class="st62" d="M129.1,2817.7c-0.9-4.1-8-40.6-7.8-55.1c0.1-14.6-7.6-48.3,22.2-22.5c28.5,24.7,50.9,46,69.6,39.7
     c21-7,71.9-25.3,78.7-25.4c6.7-0.1,13.7,7.8-7.3,33.3c-21,25.4-37.9,31.7-15.9,51.3c29,25.6,55.3,45.4,47.9,57.1
     c-7.5,11.9-27.5,7.4-56.5-5.7c-26.6-12-51.8-30.3-53.5,10.1c-1.2,30.6,5.1,73.6-11.9,78.5c-16.5,4.8-28.8-26.8-39.9-50.8
@@ -1571,3 +1592,4 @@
     C159.5,2784.1,160.3,2780.7,158.6,2777.8z"/>
 </g>
 </svg>
+

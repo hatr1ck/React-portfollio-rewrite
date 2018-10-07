@@ -16,7 +16,8 @@ class Weather extends Component {
       });
     }
 
-  send = ()=> {
+  send = (event)=> {
+    event.preventDefault();
     axios.get("http://api.openweathermap.org/data/2.5/weather?q="+this.state.city+"&APPID=abce00147b0566534c2aa99ed56b6cd5")
     .then((response)=> {
       let newtemp = 1;
@@ -33,16 +34,15 @@ class Weather extends Component {
     })
     .catch((res)=>console.log(res));
   }
-  
+
     render() {
       return (
-            <div>
+            <form  onSubmit={this.send}  className='wet'>
               <Term val={1200+this.state.temp} />
               <h1>{Math.round(this.state.temp/20)}</h1>
-              <input onChange={this.weatherRequest.bind(this)} />
+              <input onChange={this.weatherRequest.bind(this)} /><br />
                 <button type="submit" onClick={this.send} className="btn btn-info">Get Weather</button>
-                
-            </div>
+            </form>
       );
     }
   }

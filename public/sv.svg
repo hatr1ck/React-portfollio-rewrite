@@ -1,6 +1,10 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   viewBox="0 0 1920 3080" style="enable-background:new 0 0 1920 3080;" xml:space="preserve">
+<svg preserveAspectRatio="xMinYMin slice" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="100px" y="0px"
+   viewBox="0 0 1920 3080" width='90rem'>
 <style type="text/css">
+body{
+  background: #230B03;
+}
+  .st53{fill:#230B03;}
   .st0{fill:#7C4D25;}
   .st1{fill:url(#SVGID_1_);}
   .st2{fill:url(#SVGID_2_);stroke:#000000;stroke-miterlimit:10;}
@@ -54,7 +58,6 @@
   .st50{fill:#184929;stroke:#050505;stroke-miterlimit:10;}
   .st51{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
   .st52{fill:#FFFFFF;stroke:#FCFCFC;stroke-miterlimit:10;}
-  .st53{fill:#0C0A06;}
   .st54{fill:#EEA120;}
   .st55{fill:#5D312D;}
   .st56{fill:#DE3226;}
@@ -238,7 +241,7 @@
   }
     .cloud{
     animation: swms 60s infinite linear;
-    opacity: .9;
+    opacity: .8;
   }
     @keyframes swms{
     0%{
@@ -250,7 +253,7 @@
   }
       .cloud1{
     animation: swmss 50s infinite linear;
-    opacity: .9;
+    opacity: .8;
   }
     @keyframes swmss{
     0%{
@@ -262,7 +265,7 @@
   }
       .cloud2{
     animation: swms 80s infinite linear;
-    opacity: .9;
+    opacity: .8;
   }
     @keyframes swms{
     0%{
@@ -271,6 +274,18 @@
     100%{
       transform: translateX(100%);
     }
+  }
+  .svg{
+    position: relative;
+
+  }
+   #root{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+  *{
+    margin: 0;
   }
 </style>
 <g id="change2">

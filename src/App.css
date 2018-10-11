@@ -4,8 +4,9 @@
   font-family: "open sans";
 }
 .content{
-	margin:5.3% 6.7% 0% 6.7%;
-	border: 2px solid white;
+	margin:5.3% 6.7% 0% 6.7%;/*
+	border: 1px solid white;
+	border-radius: 2%;*/
 }
 .head{
 	width: 50%;
@@ -31,4 +32,12 @@
 	100%{
 		transform: translate(-7%, 7%);
 	}
+}
+@media only screen and (max-width: 1200px) {
+    .about {
+        background-color: #002d4a;
+        padding-bottom: 10%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }

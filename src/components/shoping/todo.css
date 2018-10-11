@@ -1,14 +1,30 @@
 .Ap{
-    width: 100px;
+    width: 500px;
     height: 600px;
     margin: 0 auto;
-    border: 2px solid black;
-
+    overflow-y: auto;
+    padding: 1%;
 }
 .li{
-    text-decoration: none;
-    background-color: bisque;
-    animation: frames 1s   forwards ease-in-out;
+    animation: frames 1s forwards ease-in-out;
+    font-size: 25px;
+    padding: 10px;
+    width: 100%;
+}
+.btn{
+    display: block;
+    z-index: 10;
+}
+.input{
+    width: 100%;
+    font-size: 20px;
+}
+.ul{
+    list-style: decimal;
+}
+.btn{
+    float: right;
+    display: block;
 }
 @keyframes frames {
     0%{
@@ -20,9 +36,9 @@
 }
 
   
-  @media screen and (min-width: 400px){
+  @media screen and (max-width: 500px){
     .Ap{
-        width: 500px;
+        width: 320px;
         height: 600px;
     }
   }

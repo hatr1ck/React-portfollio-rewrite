@@ -1,7 +1,14 @@
 .wet{
 	width: 300px;
 	border-radius: 10px;
-	border: 3px solid white;
+	border: 5px solid;
 	margin: auto;
+	text-align: center;
+	padding: 10px;
+}
+.block{
 	display: inline-block;
+}
+.btn-info{
+	width: 100%;
 }

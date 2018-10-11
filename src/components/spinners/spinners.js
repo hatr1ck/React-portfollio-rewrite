@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react';
 import './spinners.css';
+import {Link} from 'react-router-dom';
+import home from'../Home.svg';
 
 class Spinners extends Component {
 state={
@@ -18,19 +20,18 @@ clicked = (e)=>{
 
       return (
       	<div>
-      	<h1>So it's middle of a summer, and I'm like staring at a ventilator thinking: "should I do some spinner simulator?"</h1>
-      	<h3>Choose one: </h3>
-      		<div className="spinner spinner-1" onClick={this.clicked}></div>
-      		<div className="spinner spinner-2" onClick={this.clicked}></div>
-      		<div className="spinner spinner-3" onClick={this.clicked}></div>
-      		<div className="spinner spinner-4" onClick={this.clicked}></div>
-      		<div className="spinner spinner-5" onClick={this.clicked}></div>
-      		<div className="spinner-6" onClick={this.clicked}></div>
-      		<div className="cssload-thecube" onClick={this.clicked}>
-				<div className="cssload-cube cssload-c1" onClick={this.clicked}></div>
-				<div className="cssload-cube cssload-c2" onClick={this.clicked}></div>
-				<div className="cssload-cube cssload-c4" onClick={this.clicked}></div>
-				<div className="cssload-cube cssload-c3" onClick={this.clicked}></div>
+      <Link to='/'><img alt='404' src={home} height='100rem' className='imge'/></Link>
+      <div>
+      		<div className="spinner spinner-1"></div>
+      		<div className="cssload-spin-box6"></div>
+      		<div className="spinner spinner-2"></div>
+      		<div className="spinner spinner-3"></div>
+      		<div className="spinner-6"></div>
+      		<div className="cssload-thecube">
+				<div className="cssload-cube cssload-c1"></div>
+				<div className="cssload-cube cssload-c2"></div>
+				<div className="cssload-cube cssload-c4"></div>
+				<div className="cssload-cube cssload-c3"></div>
 			</div>
 			<div className="windows8">
 				<div className="wBall" id="wBall_1">
@@ -49,6 +50,58 @@ clicked = (e)=>{
 					<div className="wInnerBall"></div>
 				</div>
 			</div>
+			<div className="cssload-container">
+				<ul className="cssload-flex-container">
+					<li>
+						<span className="cssload-loading cssload-one"></span>
+						<span className="cssload-loading cssload-two"></span>
+						<span className="cssload-loading-center"></span>
+					</li>
+					</ul>
+			</div>	
+			<div className="cssload-clock"></div>
+			<div className="cssload-container1">
+				<div className="cssload-arc">
+					<div className="cssload-arc-cube"></div>
+				</div>
+			</div>
+			<div className="cssload-container2">
+				<div className="cssload-tube-tunnel"></div>
+			</div>
+						<div className="cssload-bell">
+				<div className="cssload-circle">
+					<div className="cssload-inner"></div>
+				</div>
+				<div className="cssload-circle">
+					<div className="cssload-inner"></div>
+				</div>
+				<div className="cssload-circle">
+					<div className="cssload-inner"></div>
+				</div>
+				<div className="cssload-circle">
+					<div className="cssload-inner"></div>
+				</div>
+				<div className="cssload-circle">
+					<div className="cssload-inner"></div>
+				</div>
+</div>
+<div className="cssload-loader8"></div>
+<div class="cssload-container9">
+<div class="cssload-loading9"><i></i><i></i></div>
+</div>
+<div class="cssload-spinner10"></div>
+<div class="wrapper11">
+	<div class="cssload-loader11"></div>
+</div>
+<div class="cssload-container12">
+	<ul class="cssload-flex-container12">
+		<li>
+			<span class="cssload-loading12"></span>
+		</li>
+	</ul>
+</div>	
+<span class="cssload-loader13"><span class="cssload-loader-inner13"></span></span>
+      	</div>
       	</div>
       );
     }

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Magickball.css";
+import {Link} from 'react-router-dom';
+import home from'../Home.svg';
 
 export default class Magickball extends Component {
     state={
@@ -31,13 +33,13 @@ export default class Magickball extends Component {
     clicked = (e)=>{
       if(this.state.somestyle === 'up'){
         this.setState({
-        answer: this.state.answers[Math.floor(Math.random() * 21)],
+        answer: this.state.answers[Math.floor(Math.random() * 20)],
         somestyle:"up1"
       })
       }
         else{
           this.setState({
-        answer: this.state.answers[Math.floor(Math.random() * 21)],
+        answer: this.state.answers[Math.floor(Math.random() * 20)],
         somestyle:"up"
         }
       )}
@@ -45,14 +47,17 @@ export default class Magickball extends Component {
 
     render(){
       return(
-      <div className="ball">
-      <div className="epos">
-      <div className='ebal' onClick={this.clicked}>
+        <div>
+      <Link to='/'><img alt='404' src={home} height='100rem' className='imge'/></Link>
+
+        <div className='try'>
+
+      <div className='ball' onClick={this.clicked}>
         <div className="egrad"></div>
         <div className="ewin"> <div className={this.state.somestyle}>
   <p>{this.state.answer}</p>
       </div></div>
-      <div className="textbox"></div>
+          
       </div>
       </div>
       </div>

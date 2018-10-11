@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Route, BrowserRouter, Link} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
 import Works from './components/works';
 import Weather from './components/weather API/weather';
 import Todo from './components/shoping/todo';
@@ -10,26 +10,23 @@ import Spinners from './components/spinners/spinners';
 import Magickball from './components/8ball/8ball';
 import Icons from './icons/icon';
 import aqua from'./icons/aqua1.svg';
-import star from'./icons/Css.svg';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div className="App">
-
           <div className="head">
           <h1>Vitalii 'HaTr1ck' Ovodovskiy</h1>
           <h3 id='goGreen'>Web Developer</h3>
           I tend to code things from scratch, and enjoy bringing ideas to life in the browser.
           </div>
-
-
           <div className='about'>
           
             <h3 id='goGreen'>About me:</h3><br />
-            <img src={aqua} height='300rem' className='img'/>
+            <img src={aqua} height='300rem' className='img' alt='404'/>
           <div className='info'>
+          
           At summer of 2017 I started to learn how to code, at that time I have a full time job
           and it was mostly like a hobby. My first programming language was Java,
            because... you know... Java requires updates on you windows
@@ -46,7 +43,6 @@ class App extends Component {
           <div className="content">
            <h3 id='goGreen'> My works:</h3><br />
           <Route path="/" exact component={Works} />
-          <button className='btn btn-info'>More...</button>
           <Route path="/weather" exact component={Weather} />
           <Route path="/todo" exact component={Todo}/>
           <Route path="/login1" exact component={Login}/>

@@ -28,7 +28,7 @@ class Term extends Component {
           </g>
           <g id="svg_89">
            <line id="svg_90" y2="240.57617" x2="91.42461" y1="240.57617" x1="67.42461" stroke="black" fill="none"/>
-           <line id="svg_91" y2="222.02617" x2="67.47365" y1="222.02617" x1="155.17462" stroke="black" fill="none"/>
+           <line id="svg_91" y2="222.02617" x2="67.47365" y1="222.02617" x1="155.17462" stroke="red" fill="none"/>
           </g>
           <g id="svg_92">
            <line id="svg_93" y2="203.52539" x2="91.27422" y1="203.52539" x1="67.27422" stroke="black" fill="none"/>

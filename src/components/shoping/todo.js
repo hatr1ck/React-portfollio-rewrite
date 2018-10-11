@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './todo.css';
+import trash from'./trash.svg';
+import {Link} from 'react-router-dom';
+import home from'../Home.svg';
 
 class Todo extends Component {
   constructor(props){
@@ -17,14 +20,11 @@ class Todo extends Component {
               this.setState({
                   list:response.data
               });
-            })
-      }
-    }
-
-
-
-posting = ()=>{
-  axios.post('http://localhost:3100/list/adduser', {nickname:this.state.item})
+            })}}
+posting = (e)=>{
+  e.preventDefault();
+  if(this.state.item !== ""){
+    axios.post('http://localhost:3100/list/adduser', {nickname:this.state.item})
     .then( (response)=> {
       console.log(response);
       this.state.load();
@@ -32,6 +32,7 @@ posting = ()=>{
         item:""
       })
     })
+  }
 }
 
 delete = (val)=>{
@@ -48,15 +49,16 @@ inputed = (str) =>{
 }
   render() {
     return (
- 
-      <div className="Ap">
+      <div>
+      <Link to='/'><img alt='404' src={home} height='100rem' className='imge'/></Link>
+      <form  onSubmit={this.posting} className="Ap border border-primary" >
+<button className="btn btn-info" onClick={this.posting.bind(this)}>Add item</button>
 <input className="input" value={this.state.item} onChange={this.inputed.bind(this)} />
-<button className="post" onClick={this.posting.bind(this)}>POST</button>
-<ul>{this.state.list.map(val=>{
-   return (<li value="SEXXXX"  key={val._id} className="li">{val.nickname}<button className="btn btn-danger" onClick={this.delete.bind(this, val._id)}>del</button></li>)
+<ul className='ul'>{this.state.list.map(val=>{
+   return (<li value="SEXXXX"  key={val._id} className="li border border-info">{val.nickname}<img alt='404' height='50rem' src={trash} className="btn" onClick={this.delete.bind(this, val._id)} /></li>)
 })}</ul>
-      </div>
-   
+      </form>
+   </div>
     );
   }
 }

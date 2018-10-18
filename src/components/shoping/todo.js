@@ -15,7 +15,7 @@ class Todo extends Component {
         item:"",
         delID: "",
         load:()=>{
-          axios.get('http://localhost:3100/list/add')
+          axios.get('http://localhost:3300/list/add')
             .then( (response)=> {
               this.setState({
                   list:response.data
@@ -24,7 +24,7 @@ class Todo extends Component {
 posting = (e)=>{
   e.preventDefault();
   if(this.state.item !== ""){
-    axios.post('http://localhost:3100/list/adduser', {nickname:this.state.item})
+    axios.post('http://localhost:3300/list/adduser', {nickname:this.state.item})
     .then( (response)=> {
       console.log(response);
       this.state.load();
@@ -36,7 +36,7 @@ posting = (e)=>{
 }
 
 delete = (val)=>{
-  axios.delete('http://localhost:3100/list/delete/'+val)
+  axios.delete('http://localhost:3300/list/delete/'+val)
     .then( (response)=> {
       this.state.load();
     }).catch((err)=> console.log(err));

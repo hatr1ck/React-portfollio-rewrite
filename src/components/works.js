@@ -9,14 +9,16 @@ import todos from'./shoping/todo.svg';
 import todo from'./shoping/todo.png';
 import spin from'./spinners/loading.svg';
 import spin1 from'./spinners/spin.png';
+import key from'./login/key.svg';
+import bg from'./login/bg.png';
 
 class Works extends Component {
     state= {
       projects: [
-                {title:"Weather API",logo:weat, link:"/weather", kkey:"1", pic:weats},
-                {title:"Todo",logo:todos,  link:"/todo", kkey:"2", pic:todo},
-                {title:"Login", link:"/login1", kkey:"3", pic:""},
-                {title:"Spinners",logo:spin, link:"/spinners", kkey:"4", pic:spin1},
+                {title:"Weather API", logo:weat, link:"/weather", kkey:"1", pic:weats},
+                {title:"Todo", logo:todos,  link:"/todo", kkey:"2", pic:todo},
+                {title:"Login", logo:key, link:"/login1", kkey:"3", pic:bg},
+                {title:"Spinners", logo:spin, link:"/spinners", kkey:"4", pic:spin1},
                 {title:"Frog.io", link:"/frog", kkey:"5", pic:""},
                  {title:"Magick 8-ball", logo:ball, info:'Test of faith', link:"/8ball", kkey:"6", pic:ball8}
           ]}
@@ -28,7 +30,7 @@ class Works extends Component {
           this.state.projects.map((elem)=>{
             return (<Link to={elem.link} key={elem.kkey}><li className="carde">
   <img alt='404' src={elem.pic} className="card-banner" />
-    <img src={elem.logo} height='70rem'alt='404' className="imag"  />
+    <img src={elem.logo} height='80rem'alt='404' className="imag"  />
     <h3 id='goGreen'>{elem.title}</h3>
     <span className='goWhite'>{elem.info}</span>
 </li></Link>)})) : (

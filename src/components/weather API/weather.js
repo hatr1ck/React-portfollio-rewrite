@@ -10,13 +10,11 @@ class Weather extends Component {
         city: "",
         temp: 0
     }
-
     weatherRequest = (val)=>{
       this.setState({
           city: val.target.value
       });
     }
-
   send = (event)=> {
     event.preventDefault();
     axios.get("http://api.openweathermap.org/data/2.5/weather?q="+this.state.city+"&APPID=abce00147b0566534c2aa99ed56b6cd5")
@@ -41,7 +39,6 @@ class Weather extends Component {
         
     });
   }
-
     render() {
       return (<div>
               <Link to='/'><img alt='404' src={home} height='100rem' className='imge'/></Link>
@@ -56,5 +53,4 @@ class Weather extends Component {
     }
   }
 
-  
   export default Weather;

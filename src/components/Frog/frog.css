@@ -1,7 +1,27 @@
-.kek {
-	background: pink;
-	margin: auto;
-	display: block;
-	 width:640px;
-	 height:500px;
+
+.game{
+	display: inline-block;
+	width: 346px;
+	padding: 0;
+	margin:0;
+}
+.gamewrap{
+	text-align: center;
+}
+.oops{
+	font-size: 0px !important;
+	border: 0px !important;
+}
+.game1{
+	padding: 0;
+	margin:0;
+	border: 3px solid #009999;
+
+}
+.somebody{
+	font-size: 27px;
+}
+.bat{
+	margin-top: 5px;
+	width: 100%;
 }

@@ -3,6 +3,7 @@ import "./login.css";
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import home from'../Home.svg';
+import google from './g+.svg';
 
 export default class Login extends Component {
 constructor(props){
@@ -46,8 +47,7 @@ handlePass = event => {
 
 post=(e)=>{
   	e.preventDefault();
-  	axios.post('http://localhost:3300/auth/addnew', this.state).then((res)=>{ 
-  	console.log(res)	
+  	axios.post('http://localhost:3300/auth/addnew', this.state).then((res)=>{ 	
   		this.setState({
       Err: res.data
     });
@@ -67,7 +67,6 @@ logout=(e)=>{
 log=(e)=>{
   	e.preventDefault();
 	axios.post('http://localhost:3300/auth/login', {username: this.state.username1,password: this.state.password1}).then((data)=>{
-		console.log(data)
 		this.setState({
 			data: "Logged-in as " + data.data 
 		})
@@ -79,7 +78,7 @@ log=(e)=>{
     return (
     	<div>
       <Link to='/'><img alt='404' src={home} height='100rem' className='imge'/></Link>
-  <ul className="wrapper">
+  <ul>
 <li className='li'>
     <form className="form-signin" onSubmit={this.post}>   
       <ul>
@@ -108,8 +107,10 @@ log=(e)=>{
       <label className="checkbox">
         <input type="checkbox" value="remember-me" name="rememberMe"  /> Remember me
       </label>*/} 
-      <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={this.log}>Sign up</button>
-      <button className="btn btn-lg btn-warning btn-block" type="submit" onClick={this.logout}>Log Out</button>   
+      <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={this.log}>Log In</button>
+      <button className="btn btn-lg btn-warning btn-block" type="submit" onClick={this.logout}>Log Out</button>
+      <button className="btn btn-lg btn-danger btn-block" onClick={this.logout}>Log Out</button>
+    <a style={{with:'400px', float:'left'}} className='btn btn-danger' href='http://localhost:3300/auth/google'><img style={{height:'40px'}} alt='404' src={google} />Sign In with google</a>
     </form>
     </li>
     <li className='li'>
@@ -118,7 +119,6 @@ log=(e)=>{
 		    })}</ul>
 	</li>
     </ul>
-    <a href='http://localhost:3300/auth/google'>a</a>
   </div>
     );
   }

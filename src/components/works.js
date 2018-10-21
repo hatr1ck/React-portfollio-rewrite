@@ -11,6 +11,8 @@ import spin from'./spinners/loading.svg';
 import spin1 from'./spinners/spin.png';
 import key from'./login/key.svg';
 import bg from'./login/bg.png';
+import puzzle from'./Frog/puzzle.svg';
+import puzzle1 from'./Frog/game.png';
 
 class Works extends Component {
     state= {
@@ -19,7 +21,7 @@ class Works extends Component {
                 {title:"Todo", logo:todos,  link:"/todo", kkey:"2", pic:todo},
                 {title:"Login", logo:key, link:"/login1", kkey:"3", pic:bg},
                 {title:"Spinners", logo:spin, link:"/spinners", kkey:"4", pic:spin1},
-                {title:"Frog.io", link:"/frog", kkey:"5", pic:""},
+                {title:"15 Puzzle",logo:puzzle, link:"/frog", kkey:"5", pic:puzzle1},
                  {title:"Magick 8-ball", logo:ball, info:'Test of faith', link:"/8ball", kkey:"6", pic:ball8}
           ]}
 

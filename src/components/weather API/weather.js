@@ -45,8 +45,7 @@ class Weather extends Component {
             <form  onSubmit={this.send}  className='wet border border-info'>
               <div className='block'><Term some={Math.round(this.state.temp/20)} val={1200+this.state.temp} /></div>
               <h1>{Math.round(this.state.temp/20)}</h1>
-              <input className='form-control form-control-sm' onChange={this.weatherRequest.bind(this)} />
-              <button type="submit" onClick={this.send} className="btn btn-info">Get</button>
+              <input className='form-control' onChange={this.weatherRequest.bind(this)} />
             </form>
             </div>
       );

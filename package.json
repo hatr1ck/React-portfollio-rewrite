@@ -1,20 +1,35 @@
 {
   "name": "rewrite",
   "version": "0.1.0",
+  "jest": {
+            "moduleNameMapper": { "\\.(css|less)$": "<rootDir>/assets/css/__mocks__/styleMock.js" }
+          },
+  "babel": {
+          "presets": ["env", "react"]
+        },
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
     "react": "^16.5.2",
-    "react-cookie": "^1.0.5",
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5"
   },
+  "devDependencies": {
+    "babel-jest": "*",
+    "babel-preset-env": "*",
+    "babel-preset-react": "*",
+    "jest": "*",
+    "enzyme": "*",
+    "react-addons-test-utils": "*",
+    "react-test-renderer": "*"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "npm run jest --watchAll",
+    "jest": "jest --env=node --colors --coverage test --watchAll",
     "eject": "react-scripts eject"
   }
 }

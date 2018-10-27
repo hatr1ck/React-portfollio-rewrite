@@ -17,14 +17,14 @@ import puzzle1 from'./Frog/game.png';
 class Works extends Component {
     state= {
       projects: [
-                {title:"Weather API", logo:weat, link:"/weather", kkey:"1", pic:weats},
-                {title:"Todo", logo:todos,  link:"/todo", kkey:"2", pic:todo},
-                {title:"Login", logo:key, link:"/login1", kkey:"3", pic:bg},
-                {title:"Spinners", logo:spin, link:"/spinners", kkey:"4", pic:spin1},
-                {title:"15 Puzzle",logo:puzzle, link:"/frog", kkey:"5", pic:puzzle1},
+                {title:"Weather API", logo:weat, info:'Test of faith', link:"/weather", kkey:"1", pic:weats},
+                {title:"Todo", logo:todos, info:'Test of faith', link:"/todo", kkey:"2", pic:todo},
+                {title:"Login", logo:key, info:'Test of faith', link:"/login1", kkey:"3", pic:bg},
+                {title:"Spinners", logo:spin,info:'Test of faith', link:"/spinners", kkey:"4", pic:spin1},
+                {title:"15 Puzzle",logo:puzzle,info:'Test of faith', link:"/frog", kkey:"5", pic:puzzle1},
+                {title:"test",logo:puzzle,info:'Test', link:"/game2048", kkey:"7", pic:puzzle1},
                  {title:"Magick 8-ball", logo:ball, info:'Test of faith', link:"/8ball", kkey:"6", pic:ball8}
           ]}
-
     render() {
       return (
         <ul className='ele'>

@@ -10,6 +10,7 @@ import Spinners from './components/spinners/spinners';
 import Magickball from './components/8ball/8ball';
 import Icons from './icons/icon';
 import aqua from'./icons/aqua1.svg';
+import Game2048 from'./components/donno/game2048.js';
 
 class App extends Component {
   render() {
@@ -19,14 +20,13 @@ class App extends Component {
           <div className="head">
           <h1>Vitalii 'HaTr1ck' Ovodovskiy</h1>
           <h3 id='goGreen'>Web Developer</h3>
-          I tend to code things from scratch, and enjoy bringing ideas to life in the browser.
+          I enjoy bringing ideas to life in browser.
           </div>
           <div className='about'>
           
             <h3 id='goGreen'>About me:</h3><br />
             <img src={aqua} height='300rem' className='img' alt='404'/>
           <div className='info'>
-          
           At summer of 2017 I started to learn how to code, at that time I have a full time job
           and it was mostly like a hobby. My first programming language was Java,
            because... you know... Java requires updates on you windows
@@ -48,6 +48,7 @@ class App extends Component {
           <Route path="/login1" exact component={Login}/>
           <Route path="/frog" exact component={Frog}/>
           <Route path="/8ball" exact component={Magickball}/>
+          <Route path="/game2048" exact component={Game2048}/>
           <Route path="/spinners" exact component={Spinners}/>
           </div>
         </div>

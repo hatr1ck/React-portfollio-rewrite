@@ -8,7 +8,7 @@ import node from'./Node.svg';
 import css from'./Css.svg';
 import sss from'./redux.svg';
 import bootstrap from'./Boostrap.svg';
-//import 'item.css';
+import jest from'./jest.svg';
 
 class Icon extends React.Component {
   state = {
@@ -18,6 +18,7 @@ class Icon extends React.Component {
       {name:'JavaScript', comp: javascript},
       {name:'React', comp: react}, 
       {name:'Redux', comp:sss},
+      {name:'Jest', comp: jest},
       {name:'Bootstrap', comp:bootstrap},
       {name:'Illustrator', comp: illustrator},  
       {name:'NodeJS', comp: node}, 

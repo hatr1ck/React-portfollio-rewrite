@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import {Route, BrowserRouter} from 'react-router-dom';
 import Works from './components/works';
 import Weather from './components/weather API/weather';
@@ -11,6 +10,7 @@ import Magickball from './components/8ball/8ball';
 import Icons from './icons/icon';
 import aqua from'./icons/aqua1.svg';
 import Game2048 from'./components/donno/game2048.js';
+import './App.css';
 
 class App extends Component {
   render() {

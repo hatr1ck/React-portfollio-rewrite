@@ -1,20 +1,6 @@
 {
   "name": "rewrite",
   "version": "0.1.0",
-  "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ]
-  },
-  "jest": {
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/enzyme-to-json/serializer"
-    ],
-    "moduleNameMapper": {
-      "^.+\\.(css|scss)$": "identity-obj-proxy"
-    }
-  },
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",

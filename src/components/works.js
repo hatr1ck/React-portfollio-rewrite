@@ -13,16 +13,19 @@ import key from'./login/key.svg';
 import bg from'./login/bg.png';
 import puzzle from'./Frog/puzzle.svg';
 import puzzle1 from'./Frog/game.png';
+import pixabay from'./pixabay/game.svg';
+import pixabay1 from'./pixabay/bg.png';
 
 class Works extends Component {
     state= {
       projects: [
                 {title:"Weather API", logo:weat, info:'Test of faith', link:"/weather", kkey:"1", pic:weats},
-                {title:"Todo", logo:todos, info:'Test of faith', link:"/todo", kkey:"2", pic:todo},
+                {title:"Todo", logo:todos, info:'It is what it is', link:"/todo", kkey:"2", pic:todo},
                 {title:"Login", logo:key, info:'Test of faith', link:"/login1", kkey:"3", pic:bg},
                 {title:"Spinners", logo:spin,info:'Test of faith', link:"/spinners", kkey:"4", pic:spin1},
                 {title:"15 Puzzle",logo:puzzle,info:'Test of faith', link:"/frog", kkey:"5", pic:puzzle1},
-                {title:"test",logo:puzzle,info:'Test', link:"/game2048", kkey:"7", pic:puzzle1},
+                {title:"Tetris",logo:puzzle,info:'Build the wall', link:"/tetris", kkey:"8", pic:puzzle1},
+                {title:"Pixabay API",logo:pixabay,info:'Picture searcher with Material-UI', link:"/game2048", kkey:"7", pic:pixabay1},
                  {title:"Magick 8-ball", logo:ball, info:'Test of faith', link:"/8ball", kkey:"6", pic:ball8}
           ]}
     render() {

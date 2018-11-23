@@ -1,0 +1,30 @@
+.list{
+    margin:0;
+    padding: 0;
+	width: 430px;
+    display: inline-block;
+    background-color: black;
+}
+.something{
+	background: red;
+}
+.wro{
+    text-align: center;
+}
+.zero{
+	display: inline-block;
+    font-size: '8px';
+    width: 40px;
+    height: 40px;
+    margin:1px;
+    border: 1.5px solid #6699ff;
+}
+.one{
+	background-color: pink;
+	display: inline-block;
+    font-size: '8px';
+    width: 40px;
+    height: 40px;
+    margin:1px;
+    border: 1.5px solid #6699ff;
+}

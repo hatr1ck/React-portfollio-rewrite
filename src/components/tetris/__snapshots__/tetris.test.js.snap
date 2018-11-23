@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tetris /> test snapsot 1`] = `
+<div
+  className="wr"
+/>
+`;

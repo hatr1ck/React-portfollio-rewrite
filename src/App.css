@@ -4,32 +4,33 @@
   font-family: "open sans";
 }
 .content{
-	margin: 2.3% 6.7% 0% 6.7%;
+  margin: 2.3% 6.7% 0% 6.7%;
 }
 .head{
-	width: 50%;
-	font-size: 18px;
-	margin: 6.7%;
+  width: 50%;
+  font-size: 18px;
+  margin: 6.7%;
 }
 #goGreen{
-	color: #009933;
+  color: #009933;
+  font-size: 24px;
 }
 .about{
-	margin:35% 6.7% 0% 6.7%;
-	font-size: 18px;
+  margin:35% 6.7% 6.7% 6.7%;
+  font-size: 20px;
 }
 .img{
-	animation: float 5s infinite;
-	float: left;
-	animation-direction: alternate-reverse;
+  animation: float 5s infinite;
+  float: left;
+  animation-direction: alternate-reverse;
 }
 @keyframes float{
-	0%{
-		transform: translate(0%, 0%);
-	}
-	100%{
-		transform: translate(-7%, 7%);
-	}
+  0%{
+    transform: translate(0%, 0%);
+  }
+  100%{
+    transform: translate(-7%, 7%);
+  }
 }
 @media only screen and (max-width: 1200px) {
     .about {

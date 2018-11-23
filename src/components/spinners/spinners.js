@@ -86,21 +86,21 @@ clicked = (e)=>{
 				</div>
 </div>
 <div className="cssload-loader8"></div>
-<div class="cssload-container9">
-<div class="cssload-loading9"><i></i><i></i></div>
+<div className="cssload-container9">
+<div className="cssload-loading9"><i></i><i></i></div>
 </div>
-<div class="cssload-spinner10"></div>
-<div class="wrapper11">
-	<div class="cssload-loader11"></div>
+<div className="cssload-spinner10"></div>
+<div className="wrapper11">
+	<div className="cssload-loader11"></div>
 </div>
-<div class="cssload-container12">
-	<ul class="cssload-flex-container12">
+<div className="cssload-container12">
+	<ul className="cssload-flex-container12">
 		<li>
-			<span class="cssload-loading12"></span>
+			<span className="cssload-loading12"></span>
 		</li>
 	</ul>
 </div>	
-<span class="cssload-loader13"><span class="cssload-loader-inner13"></span></span>
+<span className="cssload-loader13"><span className="cssload-loader-inner13"></span></span>
       	</div>
       	</div>
       );

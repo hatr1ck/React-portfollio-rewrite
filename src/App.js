@@ -9,7 +9,8 @@ import Spinners from './components/spinners/spinners';
 import Magickball from './components/8ball/8ball';
 import Icons from './icons/icon';
 import aqua from'./icons/aqua1.svg';
-import Game2048 from'./components/donno/game2048.js';
+import Pixabay from'./components/pixabay/pixabay.js';
+import Tetris from'./components/tetris/tetris.js';
 import './App.css';
 
 class App extends Component {
@@ -48,8 +49,9 @@ class App extends Component {
           <Route path="/login1" exact component={Login}/>
           <Route path="/frog" exact component={Frog}/>
           <Route path="/8ball" exact component={Magickball}/>
-          <Route path="/game2048" exact component={Game2048}/>
+          <Route path="/game2048" exact component={Pixabay}/>
           <Route path="/spinners" exact component={Spinners}/>
+          <Route path="/tetris" exact component={Tetris}/>
           </div>
         </div>
       </BrowserRouter>

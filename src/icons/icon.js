@@ -9,6 +9,9 @@ import css from'./Css.svg';
 import sss from'./redux.svg';
 import bootstrap from'./Boostrap.svg';
 import jest from'./jest.svg';
+import material from './material-ui.svg';
+import doc from './doc.svg';
+import webpack from './webpack.svg';
 
 class Icon extends React.Component {
   state = {
@@ -17,12 +20,15 @@ class Icon extends React.Component {
       {name:'CSS3', comp: css},
       {name:'JavaScript', comp: javascript},
       {name:'React', comp: react}, 
+      {name:'Material-UI', comp: material}, 
       {name:'Redux', comp:sss},
       {name:'Jest', comp: jest},
       {name:'Bootstrap', comp:bootstrap},
       {name:'Illustrator', comp: illustrator},  
       {name:'NodeJS', comp: node}, 
-      {name:'MongoDB', comp:mongodb}
+      {name:'MongoDB', comp:mongodb},
+      {name:'Webpack', comp:webpack},
+      {name:'Docker', comp: doc}
     ]
   }
 
@@ -32,7 +38,6 @@ class Icon extends React.Component {
       {this.state.techs.map((elem)=>{
       return (
         <div style={{display: 'inline-block', fontSize:'1rem', textAlign: 'center', margin:'1%'}} key={elem.comp}>
-        
         <img   src={elem.comp} height='60rem' alt='error'/>
         <div  className='item'>{elem.name}</div>
         </div>)

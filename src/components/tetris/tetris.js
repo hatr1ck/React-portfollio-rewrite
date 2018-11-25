@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import './tetris.css';
+import './tetris.scss';
 import {Link} from 'react-router-dom';
 import home from'../Home.svg';
+import buttons from'./buttons.svg';
+import gameover from './gameover.svg'
 
 class Tetris extends Component {
 constructor(props) {
@@ -10,6 +12,7 @@ constructor(props) {
       randomNumber: 1,
       status:'',
       score: 0,
+      lastScore:0,
       moveDown:false,
       moveLeft: false,
       moveRight: false,
@@ -74,19 +77,23 @@ constructor(props) {
       ctx.scale(30,30);
     this.drawField(this.state.field)
    window.addEventListener("keydown", (e)=>{
-    if(e.keyCode === 68){
+    if(e.keyCode === 68 || e.keyCode === 39){
       this.moveRight();
     }
-    if(e.keyCode === 83){
+    if(e.keyCode === 83 || e.keyCode === 40){
       this.moveDown();
     }
-    if(e.keyCode === 65){
+    if(e.keyCode === 65 || e.keyCode === 37){
       this.moveLeft();
     }
-    if(e.keyCode === 32){
+    if(e.keyCode === 87 || e.keyCode === 38){
       this.rotate(this.state.figures[this.state.randomNumber]);
     }
 });
+   this.setState({
+    status: 'Start'
+   })
+
   }
   rotate =(matrix)=>{
     if(this.state.rotate){
@@ -234,8 +241,11 @@ if(Math.max.apply(null, this.state.current) === 19){
             }
 
           if(mockArr[y][x]===1 ||(this.state.current[0] === x && this.state.current[1] === y) || ( this.state.current[2] === x && this.state.current[3] === y) || ( this.state.current[4] === x && this.state.current[5] === y) || (this.state.current[6] === x && this.state.current[7] === y)){
-            ctx.fillStyle='red';
+            ctx.fillStyle='#ff9933';
             ctx.fillRect(x, y, 1, 1);
+            // var image = new Image();
+            // image.src = 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif'
+            // ctx.drawImage(image,1,1);
           }
           else if((this.state.allGreen[0] === x && this.state.allGreen[1] === y) || ( this.state.allGreen[2] === x && this.state.allGreen[3] === y) || ( this.state.allGreen[4] === x && this.state.allGreen[5] === y) || (this.state.allGreen[6] === x && this.state.allGreen[7] === y)){
             
@@ -245,7 +255,7 @@ if(Math.max.apply(null, this.state.current) === 19){
             mockArr[this.state.allGreen[7]][this.state.allGreen[6]]=1;
           }
           else {
-            ctx.fillStyle='blue';
+            ctx.fillStyle='#009999';
             ctx.fillRect(x, y, 1, 1);
             mockArr[y][x] = 0;
           }
@@ -254,7 +264,6 @@ if(Math.max.apply(null, this.state.current) === 19){
 here:for(let y=mockArr.length-1; y>0; y--){
   for(let x=0; x<mockArr[y].length; x++){
     if(mockArr[1][x]===1){
-     console.log('re') 
     }
     if(mockArr[y][x]===0){
      continue here; 
@@ -266,7 +275,7 @@ here:for(let y=mockArr.length-1; y>0; y--){
   this.setState({
     score: this.state.score+1
   })
-  this.speedUp()
+  this.newFigure()
 }
     this.setState({
               field:mockArr,
@@ -277,8 +286,12 @@ here:for(let y=mockArr.length-1; y>0; y--){
                           if(mockArr[1][i]===1){
                           clearInterval(this.intervalId)
                           this.setState({
+                            rotate: false,
+                            lastScore: this.state.score,
+                            moveDown:false,
+                            score: 0,
                             speed: 1000,
-                            status: 'Game over',
+                            status: 'Game',
      field:[[0,0,0,0,0,0,0,0,0,0],
               [0,0,0,0,0,0,0,0,0,0],
               [0,0,0,0,0,0,0,0,0,0],
@@ -359,11 +372,11 @@ here:for(let y=mockArr.length-1; y>0; y--){
             this.intervalId = setInterval(this.moveDown, this.state.speed);
             this.drawField()
   }
-  speedUp=()=>{
+  newFigure=()=>{
     clearInterval(this.intervalId);
    this.intervalId = setInterval(this.moveDown, this.state.speed);
-   console.log(this.intervalId);
    this.setState({
+    status:'',
     rotate: true,
     moveLeft:true,
     moveDown:true,
@@ -371,15 +384,31 @@ here:for(let y=mockArr.length-1; y>0; y--){
     speed: this.state.speed - 100
    })
   }
-
   render() {
     return (
       <div>
-        <div className="wro">
+      <Link to='/'><img alt='404' src={home} height='100rem' className='imge'/></Link>
+      <div className='tetris'>
+      {this.state.status === 'Game' ? 
+        <div className='over'><img alt='404' src={gameover} height='100rem' className='imgt'/>
+        <h1>Your score is: {this.state.lastScore}</h1>
+        <div className='cont'>
+        <button className='btn  batan' onClick={this.newFigure}>RESET</button>
         </div>
+        </div> 
+      : null}
+      {this.state.status === 'Start' ? 
+        <div className='over'><img alt='404' src={buttons} height='150rem' className='imgt'/>
+        <div className='cont'>
+        <button className='btn  batan' onClick={this.newFigure}>Start</button>
+        </div>
+        </div> 
+      : null}
+        <div className="wree">
         <canvas ref="canvas" width={300} height={600}/>
-        <h1>{this.state.status}{ this.state.score}speed:{this.state.speed/1000}</h1>
-        <button onClick={this.speedUp}>Start/SpeedUp</button>
+        {this.state.status === ''? <h1 className='cont'>Lines cleared: {this.state.score}</h1>: null}
+        </div>
+        </div>
         </div>
     );
   }

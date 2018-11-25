@@ -4,13 +4,14 @@ import Works from './components/works';
 import Weather from './components/weather API/weather';
 import Todo from './components/shoping/todo';
 import Login from './components/login/login';
-import Frog from './components/Frog/Frog';
+import Puzzle from './components/Puzzle/puzzle';
 import Spinners from './components/spinners/spinners';
 import Magickball from './components/8ball/8ball';
 import Icons from './icons/icon';
 import aqua from'./icons/aqua1.svg';
 import Pixabay from'./components/pixabay/pixabay.js';
 import Tetris from'./components/tetris/tetris.js';
+import Socket from'./components/socket/socket.js';
 import './App.css';
 
 class App extends Component {
@@ -47,11 +48,12 @@ class App extends Component {
           <Route path="/weather" exact component={Weather} />
           <Route path="/todo" exact component={Todo}/>
           <Route path="/login1" exact component={Login}/>
-          <Route path="/frog" exact component={Frog}/>
+          <Route path="/puzzle" exact component={Puzzle}/>
           <Route path="/8ball" exact component={Magickball}/>
           <Route path="/game2048" exact component={Pixabay}/>
           <Route path="/spinners" exact component={Spinners}/>
           <Route path="/tetris" exact component={Tetris}/>
+          <Route path="/socket" exact component={Socket}/>
           </div>
         </div>
       </BrowserRouter>

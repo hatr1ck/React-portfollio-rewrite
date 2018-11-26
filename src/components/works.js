@@ -19,9 +19,13 @@ import chat from'./socket/chat.svg';
 import chatbg from'./socket/chat.png';
 import tetris1 from'./tetris/tetris.svg';
 import tetris2 from'./tetris/tetris.png';
+import arrowL from '../icons/arrowL.svg';
+import arrowR from '../icons/arrowR.svg';
 
 class Works extends Component {
     state= {
+      first:0,
+      last:0,
       projects: [
                 {title:"Weather API", logo:weat, info:'Test of faith', link:"/weather", kkey:"1", pic:weats},
                 {title:"Todo", logo:todos, info:'It is what it is', link:"/todo", kkey:"2", pic:todo},
@@ -33,27 +37,54 @@ class Works extends Component {
                 {title:"Pixabay API",logo:pixabay,info:'Picture searcher with Material-UI', link:"/game2048", kkey:"7", pic:pixabay1},
                  {title:"Magick 8-ball", logo:ball, info:'Test of faith', link:"/8ball", kkey:"6", pic:ball8}
           ]}
+      componentDidMount(){
+        if(window.innerWidth > 800){
+          this.setState({
+                    last: 8,
+                    height: '606px'
+          })
+        }
+        else{
+          this.setState({
+                    last: 1,
+                    height: '303px'
+                  })
+        }
+      }
+      moveRight=()=>{
+        if(this.state.last < this.state.projects.length){
+        this.setState({
+          first: this.state.first+1,
+          last:this.state.last+1
+        })
+      }
+      }
+      moveLeft=()=>{
+        if(this.state.first > 0){
+        this.setState({
+          first: this.state.first-1,
+          last:this.state.last-1
+        })
+      }
+      }
     render() {
       return (
+        <div>
         <ul className='ele'>
-        {window.innerWidth > 800 ? (
-          this.state.projects.map((elem)=>{
+          {this.state.projects.slice(this.state.first, this.state.last).map((elem)=>{
             return (<Link to={elem.link} key={elem.kkey}><li className="carde">
-  <img alt='404' src={elem.pic} className="card-banner" />
-    <img src={elem.logo} height='80rem'alt='404' className="imag"  />
-    <h3 id='goGreen'>{elem.title}</h3>
-    <span className='goWhite'>{elem.info}</span>
-</li></Link>)})) : (
-        this.state.projects.splice(0, 3).map((elem)=>{
-            return (<Link to={elem.link} key={elem.kkey}><li className="carde">
-  <img alt='404' src={elem.pic}className="card-banner" />
-    <img src={elem.logo} height='70rem'alt='404' className="imag"  />
-    <h3 id='goGreen'>{elem.title}</h3>
-    <p>{elem.text}</p>
-</li></Link>)
-          })
-            )}
+              <img alt='404' src={elem.pic} className="card-banner" />
+                <img src={elem.logo} height='80rem'alt='404' className="imag"  />
+                <h3 id='goGreen'>{elem.title}</h3>
+                <span className='goWhite'>{elem.info}</span>
+            </li></Link>)})}
           </ul>
+          <div className='cen'>
+          <img className='arrow' alt='404' width='50px'src={arrowL} onClick={this.moveLeft} />
+          <span>{this.state.last - this.state.first + "/" + this.state.projects.length}</span>
+           <img className='arrow' alt='404' width='50px' src={arrowR} onClick={this.moveRight} />
+         </div>
+         </div>
 
           
       );

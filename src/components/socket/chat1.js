@@ -1,29 +1,32 @@
 import React, { Component } from 'react';
 import './socket.css';
-import openSocket from 'socket.io-client';
-const socket = openSocket('http://localhost:3300');
+import io from 'socket.io-client';
 
 class Chats extends Component {
-  state={
+    constructor(props) {
+    super(props);
+    this.socket = io('http://localhost:3300');
+  this.state={
   partner:'',
   messages:[],
   message: '',
   name:''
 }
-componentWillUnmount(){
-  socket.disconnect();
 }
-
+componentWillUnmount(){
+   this.socket.close();
+}
 componentDidMount(){
-    socket.on('connection', (data)=>{
+  this.socket.open();
+    this.socket.on('connection', (data)=>{
       });
-    socket.on('chat', (data)=>{
+    this.socket.on('chat', (data)=>{
       this.setState({
         messages: [...this.state.messages, data],
         partner:''
       })
       });
-    socket.on('typing', (data)=>{
+    this.socket.on('typing', (data)=>{
       if(data.message === ""){
         this.setState({
           partner: ""
@@ -39,7 +42,7 @@ componentDidMount(){
 
 send=(e)=>{
   e.preventDefault();
-    socket.emit('chat', {
+    this.socket.emit('chat', {
       name: this.state.name,
       message: this.state.message
   });
@@ -52,7 +55,7 @@ typingMsg=(e)=>{
   this.setState({
     message: e.target.value
   })
-socket.emit('typing', {name:this.state.name, message: e.target.value});
+this.socket.emit('typing', {name:this.state.name, message: e.target.value});
 }
 
 typingName=(e)=>{

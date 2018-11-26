@@ -13,6 +13,7 @@ import Pixabay from'./components/pixabay/pixabay.js';
 import Tetris from'./components/tetris/tetris.js';
 import Socket from'./components/socket/socket.js';
 import './App.css';
+import footer from './icons/algaesCC.svg'
 
 class App extends Component {
   render() {
@@ -54,7 +55,9 @@ class App extends Component {
           <Route path="/spinners" exact component={Spinners}/>
           <Route path="/tetris" exact component={Tetris}/>
           <Route path="/socket" exact component={Socket}/>
+          
           </div>
+          <img className='footer'  src={footer} alt='error'/>
         </div>
       </BrowserRouter>
     );

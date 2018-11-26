@@ -3,9 +3,32 @@
     padding: 0;
     text-align: center;
   font-family: "open sans";
+  float: left;
 }
 .goWhite{
   color: white;
+}
+.arrow{
+  opacity: .4;
+}
+.cen{
+  text-align: center;
+}
+.arrow1{
+}
+.arrow2{
+}
+.arrow:hover{
+  animation: opa 1s;
+  animation-fill-mode:forwards;
+}
+@keyframes opa{
+  0%{
+    opacity: .4;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 .carde {
   margin: 1%;

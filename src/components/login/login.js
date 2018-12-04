@@ -6,11 +6,7 @@ import home from'../Home.svg';
 import google from './g+.svg';
 
 export default class Login extends Component {
-constructor(props){
-    super(props);
-    this.state.load();
-  }
-    state = {
+      state = {
       username1:"",
       password1:"",
       Err: [],
@@ -19,15 +15,29 @@ constructor(props){
       password: "",
       data: "",
       password2: "",
-      list:[],
-      load:()=>{
+      signUp: 'butn',
+      signIn:'signIn',
+      list:['your mom','your mom','your mom','your mom','your mom','your mom'],
+      switch: false
+    };
+componentDidMount(){
           axios.get('http://localhost:3300/auth/allusers')
             .then( (response)=> {
-              this.setState({
-                  list:response.data
+              console.log(response)
+if(response.data.current){
+                this.setState({
+                  data:'Logged-in as: '+ response.data.current,
+                  list:response.data.list
               });
-            })}
-    };
+}
+else{
+  this.setState({
+                  list:response.data.list
+              });
+}
+            })
+}
+
 
 handleChange = event => {
     this.setState({
@@ -51,14 +61,13 @@ post=(e)=>{
   		this.setState({
       Err: res.data
     });
-  		this.state.load();
   })};
 google=()=>{
 	axios.get('http://localhost:3300/auth/google');
 }
 logout=(e)=>{
   	e.preventDefault();
-	axios.get('http://localhost:3300/auth/logout').then((data)=>{
+	axios.get('http://localhost:3300/auth/logout').then(()=>{
 		this.setState({
 			data: ''
 		})
@@ -67,58 +76,87 @@ logout=(e)=>{
 log=(e)=>{
   	e.preventDefault();
 	axios.post('http://localhost:3300/auth/login', {username: this.state.username1,password: this.state.password1}).then((data)=>{
-		this.setState({
-			data: "Logged-in as " + data.data 
+    this.setState({
+			data: "Logged-in as " + data.data,
+      username1:'',
+      password1:''
 		})
 	}).catch(err=> {this.setState({
 		data:"Wrong username/password"
 	})});
 }
+signUp=()=>{
+  this.setState({
+    switch:true,
+    signIn: 'butn',
+    signUp: 'signUp'
+  })
+}
+signIn=()=>{
+  this.setState({
+    switch:false,
+    signIn: 'signIn',
+    signUp: 'butn'
+  })
+}
   render() {
+    console.log('kek')
     return (
     	<div>
       <Link to='/'><img alt='404' src={home} height='100rem' className='imge'/></Link>
-  <ul>
-<li className='li'>
-    <form className="form-signin" onSubmit={this.post}>   
-      <ul>
-  {this.state.Err.length > 0 && Array.isArray(this.state.Err) ? (this.state.Err.map(er=>{
-  	return <li className='alert alert-danger' key={er.msg} >{er.msg}</li>})) : this.state.Err==="Success"? <li className='alert alert-success'>Success</li>: this.state.Err.length > 0 ? <li className='alert alert-info'>{this.state.Err}</li> : null}
-    </ul>    
-      <h2 className="form-signin-heading">Sign Up {Array.isArray(this.state.Err)}</h2>
-      <input type="text" className="form-control"
+      <div className='ins'>
+      <div className='goGrey'>
+<div className={this.state.signUp} onClick={this.signUp}>Sign Up</div>
+<div className={this.state.signIn} onClick={this.signIn}>Log In</div>
+{this.state.switch ? <form  onSubmit={this.post}>   
+      <h2 >Sign Up for Free</h2>
+      <input type="text" 
       placeholder="Username" id="username" onChange={this.handleChange} />
-      <input type="text" className="form-control" 
+      <input type="text" 
       placeholder="Email Address" id="email" onChange={this.handleChange} />
 
-      <input type="password" className="form-control" name="password" 
+      <input type="password"  name="password" 
       placeholder="Password" required="" id="password" onChange={this.handleChange}  />
-      <input type="password" className="form-control" name="password2" 
+      <input type="password"  name="password2" 
       placeholder="Confirm password" required="" id="password2" onChange={this.handleChange}  />      
-      <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={this.post}>Sign up</button>   
+      <div className='signIn' type="submit" onClick={this.post}>Sign up</div>  
+      <div className='googl'>
+      <a className='an'  href='http://localhost:3300/auth/google'>
+      <img height='40px' alt='404' src={google} />Sign In with google</a>
+      </div>
+    {this.state.Err.length > 0 && Array.isArray(this.state.Err) ? (this.state.Err.map(er=>{
+    return <div className='erar' key={er.msg} >{er.msg}</div>})) : 
+this.state.Err==="Success"? <div id='goGreen'>Success</div>: this.state.Err.length > 0 ? <div>{this.state.Err}</div> : null} 
     </form>
-	<form className="form-signin" onSubmit={this.log}>  
-{this.state.data.length>0 ? <div className='alert alert-danger'>{this.state.data}</div> : null}     
-      <h2 className="form-signin-heading">Login</h2>
-      <input type="text" className="form-control" name="username"
+ 
+    :
+  this.state.data.slice(0,12) !== 'Logged-in as'?
+<form  onSubmit={this.log}>    
+      <h2 >Welcome Back!</h2>
+      <input type="text"  name="username"
       placeholder="Username" onChange={this.handleLog} />
-      <input type="password" className="form-control" name="password" 
+      <input type="password"  name="password" 
       placeholder="Password" required="" onChange={this.handlePass}  />{/*     
       <label className="checkbox">
         <input type="checkbox" value="remember-me" name="rememberMe"  /> Remember me
-      </label>*/} 
-      <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={this.log}>Log In</button>
-      <button className="btn btn-lg btn-warning btn-block" type="submit" onClick={this.logout}>Log Out</button>
-      <button className="btn btn-lg btn-danger btn-block" onClick={this.logout}>Log Out</button>
-    <a style={{with:'400px', float:'left'}} className='btn btn-danger' href='http://localhost:3300/auth/google'><img style={{height:'40px'}} alt='404' src={google} />Sign In with google</a>
+      </label>*/}
+      <div className='signIn' type="submit" onClick={this.log}>Log In</div>
+      <div className='googl'>
+      <a className='an'  href='http://localhost:3300/auth/google'>
+      <img height='40px' alt='404' src={google} />Sign In with google</a>
+      </div>
+{this.state.data === 'Wrong username/password' ? <div className='erar'>{this.state.data}</div> : null}   
     </form>
-    </li>
-    <li className='li'>
-		<ul>Registered users:{this.state.list.map((name)=>{
-		    	return <li id='why' className='list-group-item' style={{color:'black'}} key={Math.random() * 12}>{name}</li>
-		    })}</ul>
-	</li>
-    </ul>
+    : <div><h2>{this.state.data}</h2>
+      <div className='signIn' onClick={this.logout}>Log Out</div>
+      </div>}
+  </div>
+  </div>
+  <div className='reg'>
+		<div className='Registered'><h2>Registered users:</h2>{this.state.list.map((name)=>{
+		    	return <div id='why' className='list-group-item' style={{color:'black'}} key={Math.random() * 12}>{name}</div>
+		    })}</div>
+  </div>
   </div>
     );
   }

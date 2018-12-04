@@ -147,7 +147,10 @@
 .spinner-6{
   display: inline-block;
 }
+.bt{
+  display: none !important;
 
+}
 .spinner-6:after {
   margin: 50px;
   content: "";
@@ -158,6 +161,12 @@
   border: 50px solid #fff;
   border-color: orangered transparent orangered transparent;
   animation: lds-hourglass 1.2s infinite;
+}
+.gowhite{
+  background-color: black;
+}
+.arws{
+  margin: 100px 50%;
 }
 @keyframes lds-hourglass {
   0% {

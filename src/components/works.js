@@ -30,6 +30,7 @@ class Works extends Component {
                 {title:"Weather API", logo:weat, info:'Test of faith', link:"/weather", kkey:"1", pic:weats},
                 {title:"Todo", logo:todos, info:'It is what it is', link:"/todo", kkey:"2", pic:todo},
                 {title:"Login", logo:key, info:'Test of faith', link:"/login1", kkey:"3", pic:bg},
+                {title:"SWITCHER", logo:ball, info:'Test of faith', link:"/game", kkey:"10", pic:bg},
                 {title:"Chat", logo:chat, info:'Chat on WebSockets', link:"/socket", kkey:"9", pic:chatbg},
                 {title:"Spinners", logo:spin,info:'Test of faith', link:"/spinners", kkey:"4", pic:spin1},
                 {title:"15 Puzzle",logo:puzzle,info:'Test of faith', link:"/puzzle", kkey:"5", pic:puzzle1},

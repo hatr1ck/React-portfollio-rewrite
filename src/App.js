@@ -1,30 +1,32 @@
-import React, { Component } from 'react';
-import {Route, BrowserRouter} from 'react-router-dom';
-import Works from './components/works';
-import Weather from './components/weather API/weather';
-import Todo from './components/shoping/todo';
-import Login from './components/login/login';
-import Puzzle from './components/Puzzle/puzzle';
-import Spinners from './components/spinners/spinners';
-import Magickball from './components/8ball/8ball';
+import React, { Component,lazy ,  Suspense} from 'react';
+import { Route, BrowserRouter } from 'react-router-dom';
 import Icons from './icons/icon';
-import aqua from'./icons/aqua1.svg';
+import aqua from './icons/aqua1.svg';
+import './App.css';
+import footer from './icons/algaesCC.svg';
+import Weather  from './components/weather API/weather';
+import Todo from'./components/shoping/todo';
+import Login from './components/login/login';
+import Puzzle from'./components/Puzzle/puzzle';
+import Spinners from'./components/spinners/spinners';
+import Magickball from'./components/8ball/8ball';
 import Pixabay from'./components/pixabay/pixabay.js';
 import Tetris from'./components/tetris/tetris.js';
 import Socket from'./components/socket/socket.js';
-import Game from'./components/game/game.js';
-import './App.css';
-import footer from './icons/algaesCC.svg'
+import Canvas from'./components/canvas/canvas.js';
+import Works from './components/works';
+// const Works =  lazy(()=> import('./components/works'));
+
 
 class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
+    render() {
+        return (
+            <BrowserRouter>
         <div className="App">
           <div className="head">
           <h1>Vitalii 'HaTr1ck' Ovodovskiy</h1>
           <h3 id='goGreen'>Web Developer</h3>
-          I enjoy bringing ideas to life in browser.
+          I enjoy bringing ideas to life in the browser.
           </div>
           <div className='about'>
           
@@ -46,7 +48,9 @@ class App extends Component {
           </div>
           <div className="content">
            <h3 id='goGreen'> My works:</h3><br />
+           {/*<Suspense fallback={<div className="cl"><div className="clock cssload-clock"></div></div>}>*/}
           <Route path="/" exact component={Works} />
+           {/*</Suspense>*/}
           <Route path="/weather" exact component={Weather} />
           <Route path="/todo" exact component={Todo}/>
           <Route path="/login1" exact component={Login}/>
@@ -56,13 +60,14 @@ class App extends Component {
           <Route path="/spinners" exact component={Spinners}/>
           <Route path="/tetris" exact component={Tetris}/>
           <Route path="/socket" exact component={Socket}/>
-          <Route path="/game" exact component={Game}/>
+          <Route path="/canvas" exact component={Canvas}/>
+         
           </div>
           <img className='footer'  src={footer} alt='error'/>
         </div>
       </BrowserRouter>
-    );
-  }
+        );
+    }
 }
 
 export default App;

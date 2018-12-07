@@ -4,6 +4,7 @@
     margin: 0 auto;
     overflow-y: auto;
     padding: 1%;
+    box-shadow: 0 0 100px rgba(0,0,0,0.5);
 }
 .li{
     animation: frames 1s forwards ease-in-out;

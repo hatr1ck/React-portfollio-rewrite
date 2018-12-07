@@ -52,8 +52,8 @@ inputed = (str) =>{
       <div>
       <Link to='/'><img alt='404' src={home} height='100rem' className='imge'/></Link>
       <form  onSubmit={this.posting} className="Ap border border-primary" >
+<input placeholder="Item Name"  className="input" value={this.state.item} onChange={this.inputed.bind(this)} />
 <button className="btn btn-info" onClick={this.posting.bind(this)}>Add item</button>
-<input className="input" value={this.state.item} onChange={this.inputed.bind(this)} />
 <ul className='ul'>{this.state.list.map(val=>{
    return (<li value="SEXXXX"  key={val._id} className="li border border-info">{val.nickname}<img alt='404' height='50rem' src={trash} className="btn" onClick={this.delete.bind(this, val._id)} /></li>)
 })}</ul>

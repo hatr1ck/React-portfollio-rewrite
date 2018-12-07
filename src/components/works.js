@@ -21,6 +21,8 @@ import tetris1 from'./tetris/tetris.svg';
 import tetris2 from'./tetris/tetris.png';
 import arrowL from '../icons/arrowL.svg';
 import arrowR from '../icons/arrowR.svg';
+import bls from'./canvas/bls.svg';
+import canvas from'./canvas/canvas.png';
 
 class Works extends Component {
     state= {
@@ -30,7 +32,7 @@ class Works extends Component {
                 {title:"Weather API", logo:weat, info:'Test of faith', link:"/weather", kkey:"1", pic:weats},
                 {title:"Todo", logo:todos, info:'It is what it is', link:"/todo", kkey:"2", pic:todo},
                 {title:"Login", logo:key, info:'Test of faith', link:"/login1", kkey:"3", pic:bg},
-                {title:"SWITCHER", logo:ball, info:'Test of faith', link:"/game", kkey:"10", pic:bg},
+                {title:"HTML5 Canvas", logo:bls, info:'My little collision experiment', link:"/canvas", kkey:"10", pic:canvas},
                 {title:"Chat", logo:chat, info:'Chat on WebSockets', link:"/socket", kkey:"9", pic:chatbg},
                 {title:"Spinners", logo:spin,info:'Test of faith', link:"/spinners", kkey:"4", pic:spin1},
                 {title:"15 Puzzle",logo:puzzle,info:'Test of faith', link:"/puzzle", kkey:"5", pic:puzzle1},

@@ -393,7 +393,7 @@ here:for(let y=mockArr.length-1; y>0; y--){
         <div className='over'><img alt='404' src={gameover} height='100rem' className='imgt'/>
         <h1>Your score is: {this.state.lastScore}</h1>
         <div className='cont'>
-        <button className='btn  batan' onClick={this.newFigure}>RESET</button>
+        <button className='btn batan' onClick={this.newFigure}>RESET</button>
         </div>
         </div> 
       : null}

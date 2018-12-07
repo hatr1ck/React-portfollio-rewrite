@@ -17,13 +17,12 @@ export default class Login extends Component {
       password2: "",
       signUp: 'butn',
       signIn:'signIn',
-      list:['your mom','your mom','your mom','your mom','your mom','your mom'],
+      list:[],
       switch: false
     };
 componentDidMount(){
           axios.get('http://localhost:3300/auth/allusers')
             .then( (response)=> {
-              console.log(response)
 if(response.data.current){
                 this.setState({
                   data:'Logged-in as: '+ response.data.current,
@@ -100,7 +99,6 @@ signIn=()=>{
   })
 }
   render() {
-    console.log('kek')
     return (
     	<div>
       <Link to='/'><img alt='404' src={home} height='100rem' className='imge'/></Link>

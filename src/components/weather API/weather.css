@@ -5,10 +5,21 @@
 	margin: auto;
 	text-align: center;
 	padding: 10px;
+    box-shadow: 0 0 100px rgba(0,0,0,0.5);
 }
 .block{
 	display: inline-block;
 }
 .btn-info{
 	width: 100%;
+}
+.getWeather {
+	border-radius: 3px;
+    width: 100%;
+    padding: 6px;
+    display: inline-block;
+    background-color: #4370b2;
+}
+.getWeather:hover {
+ opacity: 0.8;
 }
